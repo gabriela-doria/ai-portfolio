@@ -1,0 +1,11 @@
+.env
+*.key
+credentials*.json
+token*.json
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.cursor/
+.claude/settings.local.json
+~$*

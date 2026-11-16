@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gabriela Dória · Portfólio de IA</title>
+<meta name="description" content="Projetos de IA aplicada de Gabriela Dória, Engenharia Ambiental na Poli-USP: automações, um app em uso por 25 pessoas, agentes com Claude e demos feitas do zero.">
+<meta name="author" content="Gabriela Dória">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Gabriela Dória · Portfólio de IA">
+<meta property="og:description" content="Mapeio o processo, construo a automação e meço se funcionou. Quatro casos com problema, o que eu fiz e resultado.">
+<meta property="og:url" content="https://gabriela-doria.github.io/ai-portfolio/">
+<meta name="twitter:card" content="summary">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://gabriela-doria.github.io/ai-portfolio/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230E5259'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='%23fff' text-anchor='middle'%3EGD%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --paper:#F3F5F1; --surface:#FCFDFB; --surface-2:#E6EBE4;
+  --ink:#16201C; --ink-2:#3B4944; --ink-3:#5C6B65;
+  --rule:#CCD5CC; --rule-strong:#98A79F;
+  --petrol:#0E5259; --petrol-soft:#DCEAE9;
+  --amber:#8F5610;
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:56px;
+  --r:4px;
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#0D1311; --surface:#141C19; --surface-2:#1D2723;
+    --ink:#E6EDE8; --ink-2:#B5C3BC; --ink-3:#93A49C;
+    --rule:#2C3934; --rule-strong:#4A5B54;
+    --petrol:#6CC4C6; --petrol-soft:#153337;
+    --amber:#DDA45A;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.55;-webkit-text-size-adjust:100%}
+@media (min-width:720px){body{font-size:17px}}
+a{color:var(--petrol);text-underline-offset:3px;text-decoration-thickness:1px}
+a:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:2px}
+.wrap{max-width:860px;margin:0 auto;padding:var(--s6) 20px var(--s7)}
+.num{font-variant-numeric:tabular-nums}
+
+/* topo */
+header{padding-bottom:var(--s5);border-bottom:2px solid var(--ink)}
+h1{font-size:2rem;line-height:1.1;letter-spacing:-.01em;margin:0 0 var(--s3)}
+@media (min-width:720px){h1{font-size:2.5rem}}
+.lede{font-size:1.25rem;line-height:1.35;font-weight:600;margin:0 0 var(--s3);max-width:34ch}
+@media (min-width:720px){.lede{font-size:1.45rem}}
+.who{margin:0 0 var(--s3);color:var(--ink-2)}
+.links{margin:0;display:flex;flex-wrap:wrap;gap:var(--s2) var(--s5)}
+.links a{display:inline-block;padding:var(--s2) 0;min-height:44px;line-height:28px;font-weight:600}
+nav.jump{margin:var(--s4) 0 0;font-size:.92rem;color:var(--ink-3)}
+nav.jump a{display:inline-block;padding:6px 0;margin-right:var(--s4)}
+
+/* seções */
+section{padding-top:var(--s7)}
+h2{font-size:1.35rem;line-height:1.25;margin:0 0 var(--s2)}
+.sub{margin:0 0 var(--s5);color:var(--ink-2);max-width:60ch}
+
+/* mapa vaga x prova */
+.map{border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:22px minmax(0,1fr);gap:0 var(--s3);padding:var(--s3) 0;border-bottom:1px solid var(--rule)}
+@media (min-width:720px){.row{grid-template-columns:22px 15rem minmax(0,1fr)}}
+.row .what{font-weight:600}
+.row .proof{color:var(--ink-2);grid-column:2}
+@media (min-width:720px){.row .proof{grid-column:3}}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-top:7px}
+.dot.ok{background:var(--petrol)}
+.dot.plan{border:2px solid var(--amber)}
+.plan-tx{color:var(--amber);font-weight:600}
+.legend{margin:var(--s3) 0 0;font-size:.9rem;color:var(--ink-3)}
+.legend .dot{margin:0 6px -1px 0}
+
+/* casos */
+.case{padding:var(--s6) 0 var(--s5);border-top:1px solid var(--rule-strong)}
+.case:first-of-type{border-top:0;padding-top:var(--s2)}
+.case h3{font-size:1.2rem;line-height:1.3;margin:0 0 var(--s1)}
+.meta{margin:0 0 var(--s3);color:var(--ink-3);font-size:.92rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 var(--s4);padding:0;list-style:none}
+.tags li{font-size:.82rem;border:1px solid var(--rule-strong);border-radius:var(--r);padding:2px 8px;color:var(--ink-2)}
+.tags li.ai{border-color:var(--petrol);color:var(--petrol)}
+.flow{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;margin:0 0 var(--s4)}
+@media (min-width:720px){.flow{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}}
+.box{position:relative;background:var(--surface);border:1px solid var(--rule);border-radius:var(--r);padding:var(--s3) var(--s4)}
+.box b.k{display:block;color:var(--ink-3);margin-bottom:var(--s1);font-size:.92rem}
+.box p{margin:0}
+.box p+p{margin-top:var(--s2)}
+.box.res{border-color:var(--petrol);background:var(--petrol-soft)}
+.box.res b.k{color:var(--petrol)}
+.box:not(:last-child)::after{content:"↓";position:absolute;left:50%;bottom:-21px;transform:translateX(-50%);color:var(--amber);font-weight:700}
+@media (min-width:720px){.box:not(:last-child)::after{content:"→";left:auto;right:-18px;bottom:auto;top:50%;transform:translateY(-50%)}}
+.figs{margin:0 0 var(--s4);display:grid;gap:var(--s2)}
+.bar{display:grid;grid-template-columns:9.5rem minmax(0,1fr) 4.5rem;gap:var(--s3);align-items:center;font-size:.9rem;color:var(--ink-2)}
+@media (max-width:420px){.bar{grid-template-columns:7.5rem minmax(0,1fr) 4rem}}
+.trk{display:block;height:12px;background:var(--surface-2);border-radius:2px}
+.fill{display:block;height:100%;background:var(--petrol);border-radius:2px}
+.fill.alt{background:var(--rule-strong)}
+.bar .v{text-align:right;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+.facts{margin:0 0 var(--s4);padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s2) var(--s5)}
+@media (min-width:720px){.facts{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.facts li{border-top:1px solid var(--rule);padding-top:var(--s2);font-size:.9rem;color:var(--ink-2)}
+.facts strong{display:block;font-size:1.25rem;color:var(--ink);font-variant-numeric:tabular-nums}
+.measure{margin:0 0 var(--s3);color:var(--ink-2)}
+.measure b{color:var(--ink)}
+.case .go{margin:0;display:flex;flex-wrap:wrap;gap:0 var(--s5)}
+.case .go a{display:inline-block;min-height:44px;line-height:44px;font-weight:600}
+
+/* além da IA */
+.mgmt{display:grid;grid-template-columns:minmax(0,1fr);gap:0;border-top:1px solid var(--rule)}
+.mgmt .item{padding:var(--s4) 0;border-bottom:1px solid var(--rule)}
+.mgmt h3{font-size:1.05rem;margin:0 0 var(--s1)}
+.mgmt p{margin:0 0 var(--s3);color:var(--ink-2)}
+.mgmt .figs,.mgmt .facts{margin-bottom:var(--s2)}
+.mgmt .note{margin:0;font-size:.92rem}
+.facts.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:720px){.facts.two{grid-template-columns:repeat(2,minmax(0,12rem))}}
+#gestao .measure{margin-top:var(--s3);font-size:.92rem}
+
+/* como eu trabalho */
+.steps{list-style:none;margin:0 0 var(--s5);padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
+@media (min-width:720px){.steps{grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}}
+.steps li{position:relative;border-top:3px solid var(--petrol);padding-top:var(--s2);font-size:.95rem}
+.steps li.me{border-top-color:var(--amber)}
+.steps li:not(:last-child)::after{content:"↓";position:absolute;left:0;bottom:-20px;color:var(--amber);font-weight:700}
+@media (min-width:720px){.steps li:not(:last-child)::after{content:"→";left:auto;right:-16px;bottom:auto;top:var(--s2)}}
+.princ{margin:0;padding:0;list-style:none;border-top:1px solid var(--rule)}
+.princ li{padding:var(--s3) 0;border-bottom:1px solid var(--rule)}
+.princ b{display:block}
+
+/* próximos */
+.next{margin:0;padding:0;list-style:none;border-top:1px solid var(--rule)}
+.next li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:0 var(--s3);padding:var(--s3) 0;border-bottom:1px solid var(--rule)}
+.next .t{font-weight:600}
+.next .d{color:var(--ink-2);grid-column:2}
+
+footer{margin-top:var(--s7);padding-top:var(--s4);border-top:2px solid var(--ink);color:var(--ink-3);font-size:.92rem}
+footer p{margin:0 0 var(--s2)}
+footer h2{color:var(--ink)}
+footer a{display:inline-block;min-height:44px;line-height:44px;font-weight:600;font-size:1rem}
+@media print{body{background:#fff}.box:not(:last-child)::after,.steps li::after{display:none}nav.jump{display:none}section{padding-top:var(--s5)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Gabriela Dória</h1>
+  <p class="lede">Mapeio o processo, construo a automação e meço se funcionou.</p>
+  <p class="who">Engenharia Ambiental na Poli-USP, formatura em dez/2028. São Paulo.</p>
+  <p class="links">
+    <a href="https://github.com/gabriela-doria">GitHub: gabriela-doria</a>
+    <a href="https://www.linkedin.com/in/gabriela-vs-doria/">LinkedIn: gabriela-vs-doria</a>
+  </p>
+  <nav class="jump" aria-label="Seções da página">
+    <a href="#vaga">Vaga e provas</a><a href="#casos">Casos</a><a href="#gestao">Além da IA</a><a href="#como">Como trabalho</a><a href="#proximos">Próximos projetos</a>
+  </nav>
+</header>
+
+<section id="vaga" aria-labelledby="h-vaga">
+  <h2 id="h-vaga">O que a vaga pede e onde está a prova</h2>
+  <p class="sub">Uma linha por competência do Programa de Estágio GenAI, trilha AI Builder. Onde ainda não tenho prova, está escrito planejado.</p>
+  <div class="map">
+    <div class="row"><span class="dot ok" aria-label="feito"></span><span class="what">Automação que economiza horas</span><span class="proof"><a href="#personal-os">Personal OS</a>: 273 e-mails arquivados e 163 arquivos renomeados por automação. <a href="#areia-viva">Areia Viva</a>: 124 arquivos renomeados e 33 acessos configurados numa única execução.</span></div>
+    <div class="row"><span class="dot ok" aria-label="feito"></span><span class="what">Ferramenta no ar, usada por outras pessoas</span><span class="proof"><a href="#areia-viva">App do Areia Viva</a>, em uso por 25 pessoas da equipe desde 13/11/2026.</span></div>
+    <div class="row"><span class="dot ok" aria-label="feito"></span><span class="what">Dashboard</span><span class="proof"><a href="#rota">Rota do Excedente</a>: painel com kg resgatados, km e custo por kg, na demo ao vivo.</span></div>
+    <div class="row"><span class="dot ok" aria-label="feito"></span><span class="what">Agente que resolve um problema</span><span class="proof"><a href="#personal-os">Radar de estágios</a>: lê portais e e-mails, dá nota de 0 a 100 a cada vaga e monta a fila da semana.</span></div>
+    <div class="row"><span class="dot ok" aria-label="feito"></span><span class="what">Demo feita do zero</span><span class="proof"><a href="#rota">Rota do Excedente</a> e <a href="#campus">Campus de energia</a>.</span></div>
+    <div class="row"><span class="dot ok" aria-label="feito"></span><span class="what">Prompt engineering</span><span class="proof">4 prompts reutilizáveis com formato de saída fixo, pontos de decisão humana e proteção contra instruções escondidas (<a href="#areia-viva">Areia Viva</a>). 16 skills do Claude escritas por mim (<a href="#personal-os">Personal OS</a>).</span></div>
+    <div class="row"><span class="dot ok" aria-label="feito"></span><span class="what">Orquestração de agentes com Claude</span><span class="proof"><a href="#personal-os">Personal OS</a>: 16 agentes que leem as mesmas fontes, cada dado com um só dono, e 2 rotinas agendadas.</span></div>
+    <div class="row"><span class="dot plan" aria-label="planejado"></span><span class="what">Orquestração entre modelos (Claude, GPT, Gemini)</span><span class="proof"><span class="plan-tx">Planejado:</span> o Claude coordena, o Gemini lê PDFs longos e as respostas são comparadas.</span></div>
+    <div class="row"><span class="dot plan" aria-label="planejado"></span><span class="what">Automação com n8n, Make ou Zapier</span><span class="proof"><span class="plan-tx">Planejado:</span> ata de reunião vira tarefas com Make e Gemini. Hoje minhas automações são em Google Apps Script.</span></div>
+    <div class="row"><span class="dot ok" aria-label="feito"></span><span class="what">Vibe coding</span><span class="proof"><a href="#campus">Campus de energia</a>, <a href="#rota">Rota do Excedente</a> e <a href="#areia-viva">app do Areia Viva</a>, programados com o Claude como agente de código. O problema, as regras e os testes são meus.</span></div>
+    <div class="row"><span class="dot ok" aria-label="feito"></span><span class="what">APIs sem backend profundo</span><span class="proof"><a href="#areia-viva">App do Areia Viva</a> em Firebase (login Google e banco com regras por papel, sem servidor próprio). API do Drive pelo Apps Script. <span class="plan-tx">Planejado:</span> Apps Script como endpoint JSON.</span></div>
+    <div class="row"><span class="dot ok" aria-label="feito"></span><span class="what">Análise de dados com IA</span><span class="proof"><a href="#campus">Campus de energia</a>: programação linear e preço-sombra numa simulação hora a hora, conferidos com 6 testes.</span></div>
+  </div>
+  <p class="legend"><span class="dot ok" aria-hidden="true"></span>feito e publicado &nbsp; <span class="dot plan" aria-hidden="true"></span>planejado</p>
+</section>
+
+<section id="casos" aria-labelledby="h-casos">
+  <h2 id="h-casos">Casos</h2>
+  <p class="sub">Problema, o que eu fiz e resultado. Cada caso diz que IA usei e como medi.</p>
+
+  <article class="case" id="areia-viva">
+    <h3>Areia Viva: Drive reestruturado e app de horas, em uso pela equipe</h3>
+    <p class="meta">Projeto de extensão da USP, como voluntária. Drive em set/2026; app em nov/2026.</p>
+    <ul class="tags" aria-label="Ferramentas"><li class="ai">Claude</li><li class="ai">Claude Code</li><li>Google Apps Script</li><li>API do Drive</li><li>Firebase</li></ul>
+    <div class="flow">
+      <div class="box"><b class="k">Problema</b><p>25 alunos, 1 professor e 2 doutorandos dividiam um Drive sem regra de nome, pasta ou acesso. Quem saía do projeto levava os arquivos.</p><p>As horas eram registradas no computador, muitas vezes meses depois.</p></div>
+      <div class="box"><b class="k">O que eu fiz</b><p>Liderei a reestruturação do Drive como integrante do projeto. Escolhi a estrutura com uma matriz de critérios com pesos e vetos e migrei com scripts que simulam antes de executar.</p><p>Depois construí o app do projeto: registro de horas pelo celular, login Google e acesso por papel. Testei as regras de acesso com 32 casos automáticos antes de publicar.</p></div>
+      <div class="box res"><b class="k">Resultado</b><p>Drive em uso pela equipe desde set/2026. O acervo dos anos anteriores ficou acessível e os arquivos novos seguem um padrão que facilita achar depois.</p><p>App em uso por 25 pessoas desde 13/11/2026. As horas passaram a ser registradas no mesmo dia, pelo celular.</p></div>
+    </div>
+    <ul class="facts">
+      <li><strong>62</strong>pastas na nova estrutura</li>
+      <li><strong>124</strong>arquivos renomeados</li>
+      <li><strong>33</strong>contas com acesso por papel</li>
+      <li><strong>24 de 24</strong>itens passados para a conta do projeto</li>
+    </ul>
+    <p class="measure"><b>Como medi:</b> as quatro contagens saíram dos registros dos scripts. A mudança no dia a dia é o que a equipe passou a fazer e ainda não tem número; o plano de medição está no repositório. A primeira versão do app (Mapa do Drive) foi em Apps Script; a atual usa Firebase.</p>
+    <p class="go"><a href="https://github.com/gabriela-doria/student-project-ops-ai">Repositório do Drive</a></p>
+  </article>
+
+  <article class="case" id="personal-os">
+    <h3>Personal OS com Claude: 16 agentes que organizam faculdade, extensão e busca de estágio</h3>
+    <p class="meta">Projeto pessoal, desde set/2026.</p>
+    <ul class="tags" aria-label="Ferramentas"><li class="ai">Claude (skills, MCP, tarefas agendadas)</li><li>Google Apps Script</li><li>Python</li></ul>
+    <div class="flow">
+      <div class="box"><b class="k">Problema</b><p>Faculdade, extensão e busca de estágio ao mesmo tempo, com informação espalhada em vários sistemas. O gargalo era coordenar: o que vence primeiro e onde está cada arquivo.</p></div>
+      <div class="box"><b class="k">O que eu fiz</b><p>16 agentes (skills do Claude) que leem Gmail, Agenda, Drive e Moodle e me entregam propostas para aprovar. O radar de estágios dá nota de 0 a 100 a cada vaga. Nenhum agente envia ou apaga nada sem o meu ok.</p></div>
+      <div class="box res"><b class="k">Resultado</b><p>273 e-mails arquivados e 163 arquivos renomeados para o padrão (contado em 29/10/2026).</p><p>Cerca de 80 minutos poupados por semana só na coleta de materiais das aulas (estimativa).</p></div>
+    </div>
+    <p class="measure"><b>Como medi:</b> contagem nos registros de execução e no Mapa do Sistema, um banco com as 275 peças do sistema e 252 mudanças registradas. O tempo poupado é estimativa minha, sem linha de base.</p>
+    <p class="go"><a href="https://github.com/gabriela-doria/personal-os-claude">Repositório</a><a href="https://github.com/gabriela-doria/personal-os-claude/tree/main/skills/radar-estagios">Radar de estágios</a></p>
+  </article>
+
+  <article class="case" id="campus">
+    <h3>Campus de energia: qual cliente aproveita a energia que a rede não recebe</h3>
+    <p class="meta">Exercício pessoal, nov/2026. Dados fictícios.</p>
+    <ul class="tags" aria-label="Ferramentas"><li class="ai">Claude (agente de código)</li><li>Python</li><li>SciPy</li><li>Programação linear</li></ul>
+    <div class="flow">
+      <div class="box"><b class="k">Problema</b><p>Um parque eólico e solar gera mais do que cabe na linha de conexão. Vale trazer um grande consumidor para o lado do parque? Qual?</p></div>
+      <div class="box"><b class="k">O que eu fiz</b><p>Simulação hora a hora de uma semana com programação linear, preço-sombra da conexão e matriz de decisão com pesos para 3 tipos de cliente. Eu defini o problema, os métodos e os critérios; o código foi escrito com o Claude.</p></div>
+      <div class="box res"><b class="k">Resultado</b><p>Com um data center ao lado, o parque fictício aproveita 100% da energia em vez de 64%, e a receita da semana sobe 96%.</p></div>
+    </div>
+    <div class="figs" role="img" aria-label="Energia aproveitada: 64,1% sem cliente, 100% com data center">
+      <div class="bar"><span>Sem cliente</span><span class="trk"><span class="fill alt" style="width:64.1%"></span></span><span class="v">64,1%</span></div>
+      <div class="bar"><span>Com data center</span><span class="trk"><span class="fill" style="width:100%"></span></span><span class="v">100%</span></div>
+    </div>
+    <p class="measure"><b>Como medi:</b> 6 testes automáticos. Entre eles: a conta feita à mão bate com a do modelo, o preço-sombra confere ao rodar com 1 MW a mais e a menos, e a energia fecha em todas as horas.</p>
+    <p class="go"><a href="https://github.com/gabriela-doria/campus-de-energia">Repositório</a></p>
+  </article>
+
+  <article class="case" id="rota">
+    <h3>Rota do Excedente: comida que sobra em restaurantes até cozinhas solidárias</h3>
+    <p class="meta">Protótipo a partir de um case de desafio de IA, out/2026. Dados fictícios.</p>
+    <ul class="tags" aria-label="Ferramentas"><li class="ai">Claude (agente de código)</li><li>JavaScript</li><li>Leaflet e OpenStreetMap</li></ul>
+    <div class="flow">
+      <div class="box"><b class="k">Problema</b><p>Restaurantes têm comida sobrando e cozinhas solidárias não têm como buscar. Minha hipótese: o que falta é transporte.</p></div>
+      <div class="box"><b class="k">O que eu fiz</b><p>Um algoritmo que agrupa restaurantes em rotas, calcula o custo por kg e diz se a rota se paga. Roda numa página, com as premissas editáveis. A lógica e os critérios são meus; o código foi escrito com o Claude.</p></div>
+      <div class="box res"><b class="k">Resultado</b><p>No exemplo fictício, 16 restaurantes viram 6 rotas e 128 kg resgatados, a R$ 1,64 por kg. Os valores em reais são hipóteses.</p></div>
+    </div>
+    <div class="figs" role="img" aria-label="Custo por kg: R$ 1,64 com a rota, contra R$ 12,00 comprando o alimento (hipóteses)">
+      <div class="bar"><span>Rota, por kg</span><span class="trk"><span class="fill" style="width:13.7%"></span></span><span class="v">R$ 1,64</span></div>
+      <div class="bar"><span>Comprar, por kg</span><span class="trk"><span class="fill alt" style="width:100%"></span></span><span class="v">R$ 12,00</span></div>
+    </div>
+    <p class="measure"><b>Como medi:</b> o próprio algoritmo descarta a rota se o custo por kg passar do custo de comprar o alimento. Para validar em campo, proponho um piloto de 4 semanas que mede kg resgatados por semana e custo por kg.</p>
+    <p class="go"><a href="https://gabriela-doria.github.io/rota-do-excedente/">Demo ao vivo</a><a href="https://github.com/gabriela-doria/rota-do-excedente">Repositório</a></p>
+  </article>
+</section>
+
+<section id="gestao" aria-labelledby="h-gestao">
+  <h2 id="h-gestao">Além da IA: indicadores, inovação e pessoas</h2>
+  <p class="sub">Três anos na Poli Social, a consultoria de gestão da Poli para ONGs: consultora em 2023, gerente de projetos em 2024 e diretora de Projetos em 2025.</p>
+  <div class="mgmt">
+    <div class="item">
+      <h3>Diretoria de Projetos com OKRs e KPIs</h3>
+      <p>Estruturei a área com OKRs e KPIs e acompanhei cada projeto por indicador.</p>
+      <div class="figs" role="img" aria-label="94,9% de atingimento médio dos KPIs da área em 2025">
+        <div class="bar"><span>KPIs da área, 2025</span><span class="trk"><span class="fill" style="width:94.9%"></span></span><span class="v">94,9%</span></div>
+      </div>
+      <p class="note">Meta de relacionamento com as ONGs: <strong class="num">214,3%</strong> de atingimento.</p>
+    </div>
+    <div class="item">
+      <h3>Grupo de Inovação, criado do zero</h3>
+      <p>Desenhei o modelo, levei a uma assembleia de 40 membros e liderei a primeira rodada com 7 pessoas, em cerca de 8 meses.</p>
+      <div class="figs" role="img" aria-label="Modelo aprovado por 84,2% e proposta final por 83,3% dos membros">
+        <div class="bar"><span>Modelo aprovado</span><span class="trk"><span class="fill" style="width:84.2%"></span></span><span class="v">84,2%</span></div>
+        <div class="bar"><span>Proposta final</span><span class="trk"><span class="fill" style="width:83.3%"></span></span><span class="v">83,3%</span></div>
+      </div>
+    </div>
+    <div class="item">
+      <h3>Gestão de pessoas e de projeto</h3>
+      <p>Liderei 12 pessoas diretamente: 5 consultores em 2024 e 7 no Grupo de Inovação em 2025. Como gerente, conduzi uma consultoria de 10 meses para uma ONG, do escopo à entrega.</p>
+      <ul class="facts two">
+        <li><strong>12</strong>pessoas lideradas diretamente</li>
+        <li><strong>100%</strong>NPS da ONG no projeto de 10 meses, entregue no prazo</li>
+      </ul>
+    </div>
+  </div>
+  <p class="measure"><b>Fonte:</b> relatório de atividades 2025 da Poli Social e pesquisas de satisfação dos projetos.</p>
+</section>
+
+<section id="como" aria-labelledby="h-como">
+  <h2 id="h-como">Como eu trabalho com IA</h2>
+  <p class="sub">A IA propõe, eu decido e meço.</p>
+  <ol class="steps">
+    <li>Processo e métrica</li>
+    <li>Ferramenta de IA</li>
+    <li>Proposta do agente</li>
+    <li class="me">Meu ok</li>
+    <li class="me">Medição</li>
+  </ol>
+  <ul class="princ">
+    <li><b>Problema antes da ferramenta</b>Começo pelo processo e pela métrica, depois escolho a IA.</li>
+    <li><b>Humano no loop</b>Os agentes propõem, eu valido. Nada é enviado ou apagado sem ok.</li>
+    <li><b>Hipótese marcada como hipótese</b>Número sem fonte não entra como fato.</li>
+  </ul>
+</section>
+
+<section id="proximos" aria-labelledby="h-prox">
+  <h2 id="h-prox">Próximos projetos</h2>
+  <p class="sub">Planejados, sem data. Entram nos casos quando estiverem publicados e medidos.</p>
+  <ul class="next">
+    <li><span class="dot plan" aria-label="planejado"></span><span class="t">Ata de reunião vira tarefas</span><span class="d">Make e Gemini: a ata entra, as tarefas saem com responsável e prazo.</span></li>
+    <li><span class="dot plan" aria-label="planejado"></span><span class="t">Dois modelos, uma resposta conferida</span><span class="d">O Claude coordena, o Gemini lê PDFs longos e as respostas dos dois são comparadas.</span></li>
+    <li><span class="dot plan" aria-label="planejado"></span><span class="t">Endpoint JSON para o app do Areia Viva</span><span class="d">Apps Script publicado como endpoint JSON, para o app ler dados da planilha sem servidor próprio.</span></li>
+  </ul>
+</section>
+
+<footer id="contato">
+  <h2>Contato</h2>
+  <p><a href="https://www.linkedin.com/in/gabriela-vs-doria/">LinkedIn</a> &nbsp; <a href="https://github.com/gabriela-doria">GitHub</a></p>
+  <p>Atualizado em 15/11/2026. Os números têm fonte nos repositórios; dado fictício e estimativa estão marcados como tais.</p>
+</footer>
+
+</div>
+</body>
+</html>
