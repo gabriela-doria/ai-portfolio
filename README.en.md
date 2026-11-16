@@ -2,7 +2,7 @@
 
 [Português](README.md) · **English**
 
-**Page:** https://gabriela-doria.github.io/ai-portfolio/
+**Page:** https://gabriela-doria.github.io/ai-portfolio/#en (Portuguese: https://gabriela-doria.github.io/ai-portfolio/)
 
 A single page with my applied AI projects: automations, an app in daily use by the team of a university extension project, agents built with Claude and demos built from scratch. Each case shows the problem, what I did and the result, with the AI used and how I measured it.
 
@@ -16,7 +16,7 @@ A single page with my applied AI projects: automations, an app in daily use by t
 
 ## How to update
 
-1. Edit `index.html` (on GitHub: open the file and click the pencil icon).
+1. Edit `index.html` (on GitHub: open the file and click the pencil icon). Portuguese lives in the `id="pt"` block and English in the `id="en"` block: change both together.
 2. Keep the rule for numbers: only numbers with a source; fictional data and estimates labelled as such.
 3. Change the date in "Atualizado em" in the page footer.
 4. Save with a short commit message, for example `docs: add case X`.

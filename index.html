@@ -8,6 +8,7 @@
 <meta name="author" content="Gabriela Dória">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:title" content="Gabriela Dória · Portfólio de IA">
 <meta property="og:description" content="Mapeio o processo, construo a automação e meço se funcionou. Quatro casos com problema, o que eu fiz e resultado.">
 <meta property="og:url" content="https://gabriela-doria.github.io/ai-portfolio/">
@@ -56,6 +57,10 @@ h1{font-size:2rem;line-height:1.1;letter-spacing:-.01em;margin:0 0 var(--s3)}
 .links a{display:inline-block;padding:var(--s2) 0;min-height:44px;line-height:28px;font-weight:600}
 nav.jump{margin:var(--s4) 0 0;font-size:.92rem;color:var(--ink-3)}
 nav.jump a{display:inline-block;padding:6px 0;margin-right:var(--s4)}
+
+.lang{margin:0 0 var(--s2);text-align:right;font-size:.95rem}
+.lang a{display:inline-block;min-height:44px;line-height:44px;font-weight:600}
+[hidden]{display:none!important}
 
 /* seções */
 section{padding-top:var(--s7)}
@@ -148,7 +153,9 @@ footer a{display:inline-block;min-height:44px;line-height:44px;font-weight:600;f
 <body>
 <div class="wrap">
 
+<div id="pt" lang="pt-BR">
 <header>
+  <p class="lang"><a href="#en" hreflang="en" lang="en">English</a></p>
   <h1>Gabriela Dória</h1>
   <p class="lede">Mapeio o processo, construo a automação e meço se funcionou.</p>
   <p class="who">Engenharia Ambiental na Poli-USP, formatura em dez/2028. São Paulo.</p>
@@ -335,7 +342,211 @@ footer a{display:inline-block;min-height:44px;line-height:44px;font-weight:600;f
   <p><a href="https://www.linkedin.com/in/gabriela-vs-doria/">LinkedIn</a> &nbsp; <a href="https://github.com/gabriela-doria">GitHub</a></p>
   <p>Atualizado em 15/11/2026. Os números têm fonte nos repositórios; dado fictício e estimativa estão marcados como tais.</p>
 </footer>
+</div>
+
+<div id="en" lang="en" hidden>
+<header>
+  <p class="lang"><a href="#pt" hreflang="pt-BR" lang="pt-BR">Português</a></p>
+  <h1>Gabriela Dória</h1>
+  <p class="lede">I map the process, build the automation and measure whether it worked.</p>
+  <p class="who">Environmental Engineering at Poli-USP, graduating Dec 2028. São Paulo, Brazil.</p>
+  <p class="links">
+    <a href="https://github.com/gabriela-doria">GitHub: gabriela-doria</a>
+    <a href="https://www.linkedin.com/in/gabriela-vs-doria/">LinkedIn: gabriela-vs-doria</a>
+  </p>
+  <nav class="jump" aria-label="Page sections">
+    <a href="#vaga-en">Role and proof</a><a href="#casos-en">Cases</a><a href="#gestao-en">Beyond AI</a><a href="#como-en">How I work</a><a href="#proximos-en">Next projects</a>
+  </nav>
+</header>
+
+<section id="vaga-en" aria-labelledby="h-vaga-en">
+  <h2 id="h-vaga-en">What the role asks for and where the proof is</h2>
+  <p class="sub">One line per skill in the GenAI Internship Program, AI Builder track. Where I don't have proof yet, it says planned.</p>
+  <div class="map">
+    <div class="row"><span class="dot ok" aria-label="done"></span><span class="what">Automation that saves hours</span><span class="proof"><a href="#personal-os-en">Personal OS</a>: 273 emails archived and 163 files renamed by automation. <a href="#areia-viva-en">Areia Viva</a>: 124 files renamed and 33 access rights set up in a single run.</span></div>
+    <div class="row"><span class="dot ok" aria-label="done"></span><span class="what">A live tool other people use</span><span class="proof"><a href="#areia-viva-en">Areia Viva app</a>, used by 25 team members since 13 Nov 2026.</span></div>
+    <div class="row"><span class="dot ok" aria-label="done"></span><span class="what">Dashboard</span><span class="proof"><a href="#rota-en">Rota do Excedente</a>: panel with kg rescued, km and cost per kg, in the live demo.</span></div>
+    <div class="row"><span class="dot ok" aria-label="done"></span><span class="what">An agent that solves a problem</span><span class="proof"><a href="#personal-os-en">Internship radar</a>: reads job boards and emails, scores each opening from 0 to 100 and builds the week's queue.</span></div>
+    <div class="row"><span class="dot ok" aria-label="done"></span><span class="what">Demo built from scratch</span><span class="proof"><a href="#rota-en">Rota do Excedente</a> and <a href="#campus-en">Campus de energia</a>.</span></div>
+    <div class="row"><span class="dot ok" aria-label="done"></span><span class="what">Prompt engineering</span><span class="proof">4 reusable prompts with a fixed output format, human decision points and protection against hidden instructions (<a href="#areia-viva-en">Areia Viva</a>). 16 Claude skills I wrote (<a href="#personal-os-en">Personal OS</a>).</span></div>
+    <div class="row"><span class="dot ok" aria-label="done"></span><span class="what">Agent orchestration with Claude</span><span class="proof"><a href="#personal-os-en">Personal OS</a>: 16 agents that read the same sources, each piece of data with a single owner, and 2 scheduled routines.</span></div>
+    <div class="row"><span class="dot plan" aria-label="planned"></span><span class="what">Orchestration across models (Claude, GPT, Gemini)</span><span class="proof"><span class="plan-tx">Planned:</span> Claude coordinates, Gemini reads long PDFs and the answers are compared.</span></div>
+    <div class="row"><span class="dot plan" aria-label="planned"></span><span class="what">Automation with n8n, Make or Zapier</span><span class="proof"><span class="plan-tx">Planned:</span> meeting notes become tasks with Make and Gemini. Today my automations run on Google Apps Script.</span></div>
+    <div class="row"><span class="dot ok" aria-label="done"></span><span class="what">Vibe coding</span><span class="proof"><a href="#campus-en">Campus de energia</a>, <a href="#rota-en">Rota do Excedente</a> and the <a href="#areia-viva-en">Areia Viva app</a>, coded with Claude as a coding agent. The problem, the rules and the tests are mine.</span></div>
+    <div class="row"><span class="dot ok" aria-label="done"></span><span class="what">APIs without a deep backend</span><span class="proof"><a href="#areia-viva-en">Areia Viva app</a> on Firebase (Google sign-in and a database with role-based rules, no server of its own). Drive API through Apps Script. <span class="plan-tx">Planned:</span> Apps Script as a JSON endpoint.</span></div>
+    <div class="row"><span class="dot ok" aria-label="done"></span><span class="what">Data analysis with AI</span><span class="proof"><a href="#campus-en">Campus de energia</a>: linear programming and shadow prices in an hour-by-hour simulation, checked with 6 tests. <a href="#qgis-en">Spatial analysis in QGIS</a>: census, travel survey and property tax data combined into maps of São Paulo.</span></div>
+  </div>
+  <p class="legend"><span class="dot ok" aria-hidden="true"></span>done and published &nbsp; <span class="dot plan" aria-hidden="true"></span>planned</p>
+</section>
+
+<section id="casos-en" aria-labelledby="h-casos-en">
+  <h2 id="h-casos-en">Cases</h2>
+  <p class="sub">Problem, what I did and result. Each case says which AI I used and how I measured.</p>
+
+  <article class="case" id="areia-viva-en">
+    <h3>Areia Viva: a restructured Drive and an hours app, in use by the team</h3>
+    <p class="meta">USP university extension project, as a volunteer. Drive in Sep 2026; app in Nov 2026.</p>
+    <ul class="tags" aria-label="Tools"><li class="ai">Claude</li><li class="ai">Claude Code</li><li>Google Apps Script</li><li>Drive API</li><li>Firebase</li></ul>
+    <div class="flow">
+      <div class="box"><b class="k">Problem</b><p>25 students, 1 professor and 2 PhD students shared a Drive with no rule for names, folders or access. People who left the project took their files with them.</p><p>Hours were logged on a computer, often months later.</p></div>
+      <div class="box"><b class="k">What I did</b><p>As a project member, I led the Drive restructuring. I chose the structure with a weighted decision matrix with vetoes and migrated with scripts that simulate before they run.</p><p>Then I built the project's app: hours logged from the phone, Google sign-in and role-based access. I tested the access rules with 32 automated cases before publishing.</p></div>
+      <div class="box res"><b class="k">Result</b><p>Drive in use by the team since Sep 2026. Files from previous years became easy to reach, and new files follow a pattern that makes them easy to find later.</p><p>App in use by 25 people since 13 Nov 2026. Hours are now logged on the same day, from the phone.</p></div>
+    </div>
+    <ul class="facts">
+      <li><strong>62</strong>folders in the new structure</li>
+      <li><strong>124</strong>files renamed</li>
+      <li><strong>33</strong>accounts with role-based access</li>
+      <li><strong>24 of 24</strong>items moved to the project account</li>
+    </ul>
+    <p class="measure"><b>How I measured:</b> the four counts come from the scripts' logs. The day-to-day change is what the team started doing and has no number yet; the measurement plan is in the repository. The app's first version (Drive Map) ran on Apps Script; the current one uses Firebase.</p>
+    <p class="go"><a href="https://github.com/gabriela-doria/student-project-ops-ai">Drive repository</a></p>
+  </article>
+
+  <article class="case" id="personal-os-en">
+    <h3>Personal OS with Claude: 16 agents that run coursework, extension work and the internship search</h3>
+    <p class="meta">Personal project, since Sep 2026.</p>
+    <ul class="tags" aria-label="Tools"><li class="ai">Claude (skills, MCP, scheduled tasks)</li><li>Google Apps Script</li><li>Python</li></ul>
+    <div class="flow">
+      <div class="box"><b class="k">Problem</b><p>Coursework, extension work and an internship search at the same time, with information spread across many systems. The bottleneck was coordination: what is due first and where each file is.</p></div>
+      <div class="box"><b class="k">What I did</b><p>16 agents (Claude skills) that read Gmail, Calendar, Drive and Moodle and hand me proposals to approve. The internship radar scores each opening from 0 to 100. No agent sends or deletes anything without my ok.</p></div>
+      <div class="box res"><b class="k">Result</b><p>273 emails archived and 163 files renamed to the standard (counted on 29 Oct 2026).</p><p>About 80 minutes saved per week on collecting course materials alone (estimate).</p></div>
+    </div>
+    <p class="measure"><b>How I measured:</b> counts from the run logs and from the System Map, a database with the system's 275 parts and 252 logged changes. The time saved is my own estimate, with no baseline.</p>
+    <p class="go"><a href="https://github.com/gabriela-doria/personal-os-claude">Repository</a><a href="https://github.com/gabriela-doria/personal-os-claude/tree/main/skills/radar-estagios">Internship radar</a></p>
+  </article>
+
+  <article class="case" id="campus-en">
+    <h3>Campus de energia: which customer uses the energy the grid can't take</h3>
+    <p class="meta">Personal exercise, Nov 2026. Fictitious data.</p>
+    <ul class="tags" aria-label="Tools"><li class="ai">Claude (coding agent)</li><li>Python</li><li>SciPy</li><li>Linear programming</li></ul>
+    <div class="flow">
+      <div class="box"><b class="k">Problem</b><p>A wind and solar park generates more than its grid connection can carry. Is it worth bringing a large consumer next to the park? Which one?</p></div>
+      <div class="box"><b class="k">What I did</b><p>An hour-by-hour simulation of one week with linear programming, the shadow price of the connection and a weighted decision matrix for 3 customer types. I defined the problem, the methods and the criteria; the code was written with Claude.</p></div>
+      <div class="box res"><b class="k">Result</b><p>With a data center next door, the fictitious park uses 100% of its energy instead of 64%, and weekly revenue rises 96%.</p></div>
+    </div>
+    <div class="figs" role="img" aria-label="Energy used: 64.1% with no customer, 100% with a data center">
+      <div class="bar"><span>No customer</span><span class="trk"><span class="fill alt" style="width:64.1%"></span></span><span class="v">64.1%</span></div>
+      <div class="bar"><span>Data center</span><span class="trk"><span class="fill" style="width:100%"></span></span><span class="v">100%</span></div>
+    </div>
+    <p class="measure"><b>How I measured:</b> 6 automated tests. Among them: a hand calculation matches the model, the shadow price checks out when the model runs with 1 MW more and 1 MW less, and energy balances in every hour.</p>
+    <p class="go"><a href="https://github.com/gabriela-doria/campus-de-energia">Repository</a></p>
+  </article>
+
+  <article class="case" id="rota-en">
+    <h3>Rota do Excedente: surplus restaurant food to community kitchens</h3>
+    <p class="meta">Prototype from an AI challenge case, Oct 2026. Fictitious data.</p>
+    <ul class="tags" aria-label="Tools"><li class="ai">Claude (coding agent)</li><li>JavaScript</li><li>Leaflet and OpenStreetMap</li></ul>
+    <div class="flow">
+      <div class="box"><b class="k">Problem</b><p>Restaurants have food left over and community kitchens have no way to pick it up. My hypothesis: what is missing is transport.</p></div>
+      <div class="box"><b class="k">What I did</b><p>An algorithm that groups restaurants into routes, computes the cost per kg and says whether a route pays off. It runs in a web page, with editable assumptions. The logic and criteria are mine; the code was written with Claude.</p></div>
+      <div class="box res"><b class="k">Result</b><p>In the fictitious example, 16 restaurants become 6 routes and 128 kg rescued, at R$ 1.64 per kg. The values in reais are hypotheses.</p></div>
+    </div>
+    <div class="figs" role="img" aria-label="Cost per kg: R$ 1.64 with the route, against R$ 12.00 buying the food (hypotheses)">
+      <div class="bar"><span>Route, per kg</span><span class="trk"><span class="fill" style="width:13.7%"></span></span><span class="v">R$ 1.64</span></div>
+      <div class="bar"><span>Buying, per kg</span><span class="trk"><span class="fill alt" style="width:100%"></span></span><span class="v">R$ 12.00</span></div>
+    </div>
+    <p class="measure"><b>How I measured:</b> the algorithm itself drops a route if its cost per kg is higher than buying the food. To validate it in the field, I propose a 4-week pilot that measures kg rescued per week and cost per kg.</p>
+    <p class="go"><a href="https://gabriela-doria.github.io/rota-do-excedente/">Live demo</a><a href="https://github.com/gabriela-doria/rota-do-excedente">Repository</a></p>
+  </article>
+
+  <article class="case" id="qgis-en">
+    <h3>Spatial analysis in QGIS: metro, income and built area in São Paulo</h3>
+    <p class="meta">Geoprocessing course at Poli-USP, first semester of 2026. Group work of 3; the maps here are the ones I made.</p>
+    <ul class="tags" aria-label="Tools"><li class="ai">Claude (method and code guide)</li><li>QGIS</li><li>Python</li><li>geopandas</li><li>Google Earth Engine</li></ul>
+    <div class="flow">
+      <div class="box"><b class="k">Problem</b><p>Does each district's income follow its access to the metro? Where is the city most built up, and where did it grow most between 2010 and 2022?</p></div>
+      <div class="box"><b class="k">What I did</b><p>I combined public data in QGIS: an 800 m radius around the 94 stations, 2022 census population by tract, income from the 2023 travel survey and built area from property tax records on a hexagonal grid. I used Claude as a guide for the sequence of operations and for the script that redraws the maps.</p></div>
+      <div class="box res"><b class="k">Result</b><p>In 46 of the 96 districts, nobody lives within 800 m of a station. In 11 districts more than 60% do, all in the center and around it.</p></div>
+    </div>
+    <ul class="facts">
+      <li><strong>46 of 96</strong>districts with nobody within 800 m of the metro</li>
+      <li><strong>11</strong>districts with more than 60% of residents near the metro</li>
+      <li><strong>+25.5%</strong>built area in Lapa, 2010 to 2022</li>
+      <li><strong>+17.0%</strong>built area in Capela do Socorro, 2010 to 2022</li>
+    </ul>
+    <p class="measure"><b>How I measured:</b> the numbers come from the final layers, published in the repository with their sources (IBGE, São Paulo Metro, GeoSampa, property tax). The limits are written down: population evenly spread within each tract, metro stations only and straight-line distance.</p>
+    <p class="go"><a href="https://github.com/gabriela-doria/analise-espacial-qgis-sp">Repository with the maps</a></p>
+  </article>
+</section>
+
+<section id="gestao-en" aria-labelledby="h-gestao-en">
+  <h2 id="h-gestao-en">Beyond AI: metrics, innovation and people</h2>
+  <p class="sub">Three years at Poli Social, Poli-USP's management consulting group for NGOs: consultant in 2023, project manager in 2024 and Project Director in 2025.</p>
+  <div class="mgmt">
+    <div class="item">
+      <h3>Running the Projects area with OKRs and KPIs</h3>
+      <p>I set up the area with OKRs and KPIs and tracked each project by its indicators.</p>
+      <div class="figs" role="img" aria-label="94.9% average KPI achievement for the area in 2025">
+        <div class="bar"><span>Area KPIs, 2025</span><span class="trk"><span class="fill" style="width:94.9%"></span></span><span class="v">94.9%</span></div>
+      </div>
+      <p class="note">Target for relationships with the NGOs: <strong class="num">214.3%</strong> achieved.</p>
+    </div>
+    <div class="item">
+      <h3>An Innovation Group, created from scratch</h3>
+      <p>I designed the model, took it to an assembly of 40 members and led the first round with 7 people, over about 8 months.</p>
+      <div class="figs" role="img" aria-label="Model approved by 84.2% and final proposal by 83.3% of members">
+        <div class="bar"><span>Model approved</span><span class="trk"><span class="fill" style="width:84.2%"></span></span><span class="v">84.2%</span></div>
+        <div class="bar"><span>Final proposal</span><span class="trk"><span class="fill" style="width:83.3%"></span></span><span class="v">83.3%</span></div>
+      </div>
+    </div>
+    <div class="item">
+      <h3>Managing people and projects</h3>
+      <p>I led 12 people directly: 5 consultants in 2024 and 7 in the Innovation Group in 2025. As a manager, I ran a 10-month consulting project for an NGO, from scope to delivery.</p>
+      <ul class="facts two">
+        <li><strong>12</strong>people led directly</li>
+        <li><strong>100%</strong>NGO NPS on the 10-month project, delivered on time</li>
+      </ul>
+    </div>
+  </div>
+  <p class="measure"><b>Source:</b> Poli Social's 2025 activity report and the projects' satisfaction surveys.</p>
+</section>
+
+<section id="como-en" aria-labelledby="h-como-en">
+  <h2 id="h-como-en">How I work with AI</h2>
+  <p class="sub">AI proposes, I decide and measure.</p>
+  <ol class="steps">
+    <li>Process and metric</li>
+    <li>AI tool</li>
+    <li>Agent's proposal</li>
+    <li class="me">My ok</li>
+    <li class="me">Measurement</li>
+  </ol>
+  <ul class="princ">
+    <li><b>Problem before tool</b>I start from the process and the metric, then pick the AI.</li>
+    <li><b>Human in the loop</b>Agents propose, I approve. Nothing is sent or deleted without my ok.</li>
+    <li><b>Hypotheses labeled as hypotheses</b>A number without a source doesn't go in as fact.</li>
+  </ul>
+</section>
+
+<section id="proximos-en" aria-labelledby="h-prox-en">
+  <h2 id="h-prox-en">Next projects</h2>
+  <p class="sub">Planned, no date yet. They move to the cases once published and measured.</p>
+  <ul class="next">
+    <li><span class="dot plan" aria-label="planned"></span><span class="t">Meeting notes become tasks</span><span class="d">Make and Gemini: the notes go in, tasks come out with an owner and a deadline.</span></li>
+    <li><span class="dot plan" aria-label="planned"></span><span class="t">Two models, one checked answer</span><span class="d">Claude coordinates, Gemini reads long PDFs and the two answers are compared.</span></li>
+    <li><span class="dot plan" aria-label="planned"></span><span class="t">JSON endpoint for the Areia Viva app</span><span class="d">Apps Script published as a JSON endpoint, so the app reads spreadsheet data with no server of its own.</span></li>
+  </ul>
+</section>
+
+<footer id="contato-en">
+  <h2>Contact</h2>
+  <p><a href="https://www.linkedin.com/in/gabriela-vs-doria/">LinkedIn</a> &nbsp; <a href="https://github.com/gabriela-doria">GitHub</a></p>
+  <p>Updated on 15 Nov 2026. Every number has a source in the repositories; fictitious data and estimates are labeled as such.</p>
+</footer>
+</div>
 
 </div>
+<script>
+(function(){
+  var pt=document.getElementById("pt"),en=document.getElementById("en");
+  function show(){
+    var h=location.hash,isEn=(h==="#en"||/-en$/.test(h));
+    pt.hidden=isEn; en.hidden=!isEn;
+    document.documentElement.lang=isEn?"en":"pt-BR";
+    document.title=isEn?"Gabriela Dória · AI portfolio":"Gabriela Dória · Portfólio de IA";
+  }
+  window.addEventListener("hashchange",show); show();
+})();
+</script>
 </body>
 </html>

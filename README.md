@@ -2,7 +2,7 @@
 
 **Português** · [English](README.en.md)
 
-**Página:** https://gabriela-doria.github.io/ai-portfolio/
+**Página:** https://gabriela-doria.github.io/ai-portfolio/ (em inglês: https://gabriela-doria.github.io/ai-portfolio/#en)
 
 Página única com meus projetos de IA aplicada: automações, um app em uso pela equipe de um projeto de extensão, agentes com Claude e demos feitas do zero. Cada caso mostra o problema, o que eu fiz e o resultado, com a IA usada e como medi.
 
@@ -16,7 +16,7 @@ Página única com meus projetos de IA aplicada: automações, um app em uso pel
 
 ## Como atualizar
 
-1. Edite o `index.html` (no GitHub: abra o arquivo e clique no lápis).
+1. Edite o `index.html` (no GitHub: abra o arquivo e clique no lápis). O português fica no bloco `id="pt"` e o inglês no bloco `id="en"`: mude os dois juntos.
 2. Mantenha a regra dos números: só número com fonte; dado fictício e estimativa marcados como tais.
 3. Mude a data em "Atualizado em", no rodapé da página.
 4. Salve com uma mensagem de commit curta, por exemplo `docs: novo caso X`.
