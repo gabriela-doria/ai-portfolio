@@ -176,7 +176,7 @@ footer a{display:inline-block;min-height:44px;line-height:44px;font-weight:600;f
     <div class="row"><span class="dot plan" aria-label="planejado"></span><span class="what">Automação com n8n, Make ou Zapier</span><span class="proof"><span class="plan-tx">Planejado:</span> ata de reunião vira tarefas com Make e Gemini. Hoje minhas automações são em Google Apps Script.</span></div>
     <div class="row"><span class="dot ok" aria-label="feito"></span><span class="what">Vibe coding</span><span class="proof"><a href="#campus">Campus de energia</a>, <a href="#rota">Rota do Excedente</a> e <a href="#areia-viva">app do Areia Viva</a>, programados com o Claude como agente de código. O problema, as regras e os testes são meus.</span></div>
     <div class="row"><span class="dot ok" aria-label="feito"></span><span class="what">APIs sem backend profundo</span><span class="proof"><a href="#areia-viva">App do Areia Viva</a> em Firebase (login Google e banco com regras por papel, sem servidor próprio). API do Drive pelo Apps Script. <span class="plan-tx">Planejado:</span> Apps Script como endpoint JSON.</span></div>
-    <div class="row"><span class="dot ok" aria-label="feito"></span><span class="what">Análise de dados com IA</span><span class="proof"><a href="#campus">Campus de energia</a>: programação linear e preço-sombra numa simulação hora a hora, conferidos com 6 testes.</span></div>
+    <div class="row"><span class="dot ok" aria-label="feito"></span><span class="what">Análise de dados com IA</span><span class="proof"><a href="#campus">Campus de energia</a>: programação linear e preço-sombra numa simulação hora a hora, conferidos com 6 testes. <a href="#qgis">Análise espacial no QGIS</a>: Censo, Pesquisa OD e IPTU cruzados em mapas de São Paulo.</span></div>
   </div>
   <p class="legend"><span class="dot ok" aria-hidden="true"></span>feito e publicado &nbsp; <span class="dot plan" aria-hidden="true"></span>planejado</p>
 </section>
@@ -249,6 +249,25 @@ footer a{display:inline-block;min-height:44px;line-height:44px;font-weight:600;f
     </div>
     <p class="measure"><b>Como medi:</b> o próprio algoritmo descarta a rota se o custo por kg passar do custo de comprar o alimento. Para validar em campo, proponho um piloto de 4 semanas que mede kg resgatados por semana e custo por kg.</p>
     <p class="go"><a href="https://gabriela-doria.github.io/rota-do-excedente/">Demo ao vivo</a><a href="https://github.com/gabriela-doria/rota-do-excedente">Repositório</a></p>
+  </article>
+
+  <article class="case" id="qgis">
+    <h3>Análise espacial no QGIS: metrô, renda e área construída em São Paulo</h3>
+    <p class="meta">Disciplina de Geoprocessamento da Poli-USP, 1º semestre de 2026. Trabalho em grupo de 3; os mapas aqui são os que eu fiz.</p>
+    <ul class="tags" aria-label="Ferramentas"><li class="ai">Claude (guia de método e código)</li><li>QGIS</li><li>Python</li><li>geopandas</li><li>Google Earth Engine</li></ul>
+    <div class="flow">
+      <div class="box"><b class="k">Problema</b><p>A renda de cada distrito acompanha o acesso ao metrô? Onde a cidade é mais construída, e onde mais cresceu entre 2010 e 2022?</p></div>
+      <div class="box"><b class="k">O que eu fiz</b><p>Cruzei dados públicos no QGIS: raio de 800 m em volta das 94 estações, população do Censo 2022 por setor, renda da Pesquisa OD 2023 e área construída do IPTU em grade hexagonal. Usei o Claude como guia para a sequência de operações e para o script que redesenha os mapas.</p></div>
+      <div class="box res"><b class="k">Resultado</b><p>Em 46 dos 96 distritos, nenhum morador está a até 800 m de uma estação. Em 11 distritos, mais de 60% estão, todos no centro e no entorno.</p></div>
+    </div>
+    <ul class="facts">
+      <li><strong>46 de 96</strong>distritos sem morador a até 800 m do metrô</li>
+      <li><strong>11</strong>distritos com mais de 60% dos moradores perto do metrô</li>
+      <li><strong>+25,5%</strong>área construída na Lapa, 2010 a 2022</li>
+      <li><strong>+17,0%</strong>área construída na Capela do Socorro, 2010 a 2022</li>
+    </ul>
+    <p class="measure"><b>Como medi:</b> os números saem das camadas finais, publicadas no repositório junto com as fontes (IBGE, Metrô, GeoSampa, IPTU). Os limites estão escritos: população uniforme dentro do setor, só estações de metrô e distância em linha reta.</p>
+    <p class="go"><a href="https://github.com/gabriela-doria/analise-espacial-qgis-sp">Repositório com os mapas</a></p>
   </article>
 </section>
 
