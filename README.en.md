@@ -11,7 +11,7 @@ A single page with my portfolio in two parts: managing by metrics at Poli Social
 | File | What it is |
 |---|---|
 | [`index.html`](index.html) | The whole page: text, CSS and JavaScript in one file, no external libraries |
-| `assets/` | Photo, screens of the Areia Viva app (demo mode, fictitious data) and a screenshot of the Poli Social Projects area OKR spreadsheet, 2025 |
+| `assets/` | Photo, screens of the Areia Viva app (demo mode, fictitious data) , a screenshot of the Poli Social Projects area OKR spreadsheet, 2025, and Innovation Group slides (2025) |
 | `build/conteudo.py` | All page text, with Portuguese and English side by side |
 | `build/gerar.py` | Page styles; builds `index.html` from `conteudo.py` |
 | `README.md` and `README.en.md` | This text, in Portuguese and English |

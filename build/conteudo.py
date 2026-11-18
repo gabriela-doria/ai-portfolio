@@ -185,7 +185,7 @@ def page(L):
  t('Dar dono às ideias que surgiam e morriam na entidade','Giving an owner to ideas that came up and died'),
  flow(t('Ideias surgiam nas reuniões e morriam sem dono, sem método e sem prazo.','Ideas came up in meetings and died with no owner, method or deadline.'),
       t('Desenhei o modelo do Grupo de Inovação, levei a uma assembleia de 40 membros e liderei 7 pessoas do diagnóstico à solução, priorizada por matriz impacto-esforço.','I designed the Innovation Group model, took it to a 40-member assembly and led 7 people from diagnosis to solution, prioritized with an impact-effort matrix.'),
-      t('Modelo aprovado por 84,2% e proposta final por 83,3%, em cerca de 8 meses.','Model approved by 84.2% and final proposal by 83.3%, in about 8 months.'))
+      t('Modelo aprovado por 84,2%; 4 propostas levadas à votação e proposta final aprovada por 83,3%, em cerca de 8 meses.','Model approved by 84.2%; 4 proposals put to a vote and the final proposal approved by 83.3%, in about 8 months.'))
  + '<div class="eq">'
  + f'<div class="box"><span class="k">{t("1 · modelo","1 · model")}</span>{t("papéis, ritos e regras","roles, rituals and rules")}</div><span class="op">→</span>'
  + f'<div class="box"><span class="k">{t("2 · assembleia","2 · assembly")}</span>{t("40 membros votam","40 members vote")}</div><span class="op">→</span>'
@@ -196,6 +196,13 @@ def page(L):
  + '<div class="bars">'
  + bar(t('Modelo aprovado em assembleia','Model approved by the assembly'), 84.2, '84,2%', amb=True)
  + bar(t('Proposta final aprovada','Final proposal approved'), 83.3, '83,3%', amb=True)
+ + '</div>'
+
+ + '<div class="gallery2">'
+ + f'<figure class="shot"><a href="assets/inovacao-problematica.jpg"><img src="assets/inovacao-problematica.jpg" width="1100" height="619" loading="lazy" alt="{t("Slide: a dificuldade de inovar dentro de estruturas que priorizam eficiência, e a proposta de criar estruturas de experimentação","Slide: the difficulty of innovating inside structures built for efficiency, and the proposal to create structures for experimentation")}"></a><figcaption><b>{t("O problema","The problem")}</b> · {t("Institucionalização da Inovação, 2025","Institutionalizing Innovation, 2025")}</figcaption></figure>'
+ + f'<figure class="shot"><a href="assets/inovacao-metodologia-sociagil.jpg"><img src="assets/inovacao-metodologia-sociagil.jpg" width="1100" height="619" loading="lazy" alt="{t("Slide: metodologia SociÁgil, com ciclos de MVP até a inovação consolidada nos processos","Slide: the SociÁgil method, with MVP cycles until the innovation is built into the processes")}"></a><figcaption><b>{t("O método","The method")}</b> · {t("ciclos curtos de MVP até virar processo","short MVP cycles until it becomes a process")}</figcaption></figure>'
+ + f'<figure class="shot"><a href="assets/inovacao-criterios-de-decisao.jpg"><img src="assets/inovacao-criterios-de-decisao.jpg" width="1100" height="619" loading="lazy" alt="{t("Slide: critérios de decisão para escolher uma proposta: prioridade, viabilidade e resiliência, potencial de impacto","Slide: decision criteria to choose a proposal: priority, feasibility and resilience, impact potential")}"></a><figcaption><b>{t("Os critérios","The criteria")}</b> · {t("como a assembleia escolheu entre as propostas","how the assembly chose between proposals")}</figcaption></figure>'
+ + f'<figure class="shot"><a href="assets/inovacao-proposta-pontos-de-atencao.jpg"><img src="assets/inovacao-proposta-pontos-de-atencao.jpg" width="1100" height="619" loading="lazy" alt="{t("Slide: proposta Pontos de Atenção, com objetivo, problema, o que será feito, prazo e responsável","Slide: the Points of Attention proposal, with goal, problem, what will be done, deadline and owner")}"></a><figcaption><b>{t("Uma das 4 propostas","One of the 4 proposals")}</b> · {t("problema, ação, prazo e responsável","problem, action, deadline and owner")}</figcaption></figure>'
  + '</div>'
  + chips([t('matriz impacto-esforço','impact-effort matrix')], [t('facilitação','facilitation'), t('gestão de pessoas','people management')]))}
 

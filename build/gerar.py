@@ -181,6 +181,9 @@ table.mx th span{display:inline-block;max-width:70px;line-height:1.2}
 .gallery .g1{grid-area:a}.gallery .g2{grid-area:b}.gallery .g3{grid-area:c}.gallery .g4{grid-area:d}
 @media (max-width:680px){.gallery{grid-template-columns:1fr;grid-template-areas:"a" "d" "b" "c"}.gallery .g4{max-width:240px}}
 .shot a{display:block}
+.gallery2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:2px 0 10px}
+.gallery2 .shot{margin:0;max-width:none}
+@media (max-width:680px){.gallery2{grid-template-columns:1fr}}
 .gallery .shot{margin:0;max-width:none}
 .flow.two{grid-template-columns:1fr 1fr}
 @media (max-width:680px){.flow.two{grid-template-columns:1fr}}
