@@ -71,7 +71,7 @@ def page(L):
 </header>
 
 <section class="figures" aria-label="{t('Números','Figures')}">
-  <div class="fig"><b>94,9<span>%</span></b><small>{t('atingimento médio dos KPIs da área que dirigi (2025)','average KPI attainment in the area I led (2025)')}</small></div>
+  <div class="fig"><b>94,9<span>%</span></b><small>{t('atingimento médio dos 14 resultados-chave da área de Projetos que dirigi (2025)','average attainment of the 14 key results in the Projects area I led (2025)')}</small></div>
   <div class="fig"><b>30 <span>/ 14</span></b><small>{t('reuniões com a ONG atendida: realizado / meta','meetings with the client NGO: actual / target')}</small></div>
   <div class="fig"><b>25</b><small>{t('pessoas usam o app que programei com Claude Code','people use the app I built with Claude Code')}</small></div>
   <div class="fig"><b>16</b><small>{t('agentes de IA que desenhei e opero','AI agents I designed and run')}</small></div>
@@ -159,7 +159,7 @@ def page(L):
  + f'<div class="o1"><span class="k">OKR 3 · {t("processo","process")}</span>{t("Profissionalizar a área com planejamento e conhecimento compartilhado","Professionalize the area with planning and shared knowledge")}</div>'
  + '</div>'
  + '<div class="bars">'
- + bar(t('KPIs da área · atingimento médio','Area KPIs · average attainment'), 94.9, '94,9%')
+ + bar(t('14 resultados-chave · atingimento médio','14 key results · average attainment'), 94.9, '94,9%')
  + bar(t('Reuniões com a ONG · meta 14','Meetings with the NGO · target 14'), 100, '30', goal=46.7)
  + bar(t('Encontros presenciais · meta 4','In-person visits · target 4'), 100, '5', goal=80)
  + bar(t('NPS da ONG · 3 ciclos','NGO NPS · 3 cycles'), 93.3, '100·80·100')
@@ -167,7 +167,7 @@ def page(L):
  + '</div>'
  + f'<figure class="shot wide"><a href="assets/okr-projetos-2025-planilha.jpg"><img src="assets/okr-projetos-2025-planilha.jpg" width="2250" height="458" loading="lazy" alt="{t("Print da planilha de OKRs da área de Projetos da Poli Social em 2025, com objetivos, resultados-chave, valores inicial, atual e esperado e percentual","Screenshot of the Poli Social Projects area OKR spreadsheet for 2025, with objectives, key results, starting, current and target values and percentage")}"></a><figcaption><b>{t("A ferramenta","The tool")}</b> · {t("planilha de OKRs da área de Projetos, 2025: cada resultado-chave com valor inicial, atual e esperado (clique para ampliar)","Projects area OKR spreadsheet, 2025: each key result with starting, current and target value (click to enlarge)")}</figcaption></figure>'
  + chips([t('OKRs','OKRs'), 'KPIs', 'NPS'], ['Excel', 'Google Sheets', t('rituais quinzenais','fortnightly check-ins')])
- + f'<p class="how">{t("Fonte: relatório de atividades 2025 da Poli Social e planilha de OKRs da área.","Source: Poli Social 2025 activity report and the area OKR spreadsheet.")}</p>')}
+ + f'<p class="how">{t("Como medi: média do atingimento dos 14 resultados-chave da área de Projetos, cada um como valor atual ÷ valor esperado, sem limitar a 100% (meta superada conta acima de 100%, como as 30 reuniões contra 14). A coluna Percentual da planilha limita cada um a 100%. Fonte: planilha de OKRs da área e relatório de atividades 2025 da Poli Social.","How I measured: the average attainment of the Projects area's 14 key results, each as current ÷ target value, not capped at 100% (an exceeded target counts above 100%, like 30 meetings against 14). The spreadsheet's Percentage column caps each one at 100%. Source: the area OKR spreadsheet and the Poli Social 2025 activity report.")}</p>')}
 
 {case('edital','Poli Social · 2025', t('Edital de consultoria<br>condução do processo','Consulting call<br>ran the process'), t('decisão com critério','criteria-based decision'),
  t('Escolher o cliente do ano com critério, não com intuição','Choosing the year\'s client on criteria, not gut feeling'),
