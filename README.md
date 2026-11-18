@@ -11,12 +11,14 @@ Página única com meus projetos de IA aplicada: automações, um app em uso pel
 | Arquivo | O que é |
 |---|---|
 | [`index.html`](index.html) | A página inteira: texto, CSS e JavaScript no mesmo arquivo, sem bibliotecas externas |
+| `assets/` | Foto e tela do app do Areia Viva (modo de demonstração, dados fictícios) |
+| `build/gerar.py` | Gera o `index.html` em português e inglês a partir de um molde só |
 | `README.md` e `README.en.md` | Este texto, em português e em inglês |
 | `LICENSE` | Licença MIT |
 
 ## Como atualizar
 
-1. Edite o `index.html` (no GitHub: abra o arquivo e clique no lápis). O português fica no bloco `id="pt"` e o inglês no bloco `id="en"`: mude os dois juntos.
+1. Edite o texto em `build/gerar.py` (cada frase tem a versão em português e em inglês lado a lado) e rode `python3 build/gerar.py` na raiz do repositório. Também dá para editar o `index.html` direto: o português fica no bloco `id="pt"` e o inglês no bloco `id="en"`; mude os dois juntos.
 2. Mantenha a regra dos números: só número com fonte; dado fictício e estimativa marcados como tais.
 3. Mude a data em "Atualizado em", no rodapé da página.
 4. Salve com uma mensagem de commit curta, por exemplo `docs: novo caso X`.

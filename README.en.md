@@ -11,12 +11,14 @@ A single page with my applied AI projects: automations, an app in daily use by t
 | File | What it is |
 |---|---|
 | [`index.html`](index.html) | The whole page: text, CSS and JavaScript in one file, no external libraries |
+| `assets/` | Photo and a screen of the Areia Viva app (demo mode, fictitious data) |
+| `build/gerar.py` | Builds `index.html` in Portuguese and English from a single template |
 | `README.md` and `README.en.md` | This text, in Portuguese and English |
 | `LICENSE` | MIT license |
 
 ## How to update
 
-1. Edit `index.html` (on GitHub: open the file and click the pencil icon). Portuguese lives in the `id="pt"` block and English in the `id="en"` block: change both together.
+1. Edit the text in `build/gerar.py` (each sentence has its Portuguese and English versions side by side) and run `python3 build/gerar.py` from the repository root. You can also edit `index.html` directly: Portuguese lives in the `id="pt"` block and English in the `id="en"` block; change both together.
 2. Keep the rule for numbers: only numbers with a source; fictional data and estimates labelled as such.
 3. Change the date in "Atualizado em" in the page footer.
 4. Save with a short commit message, for example `docs: add case X`.
