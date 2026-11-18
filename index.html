@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gabriela Dória · Portfólio de IA</title>
-<meta name="description" content="Projetos de IA aplicada de Gabriela Dória, Engenharia Ambiental na Poli-USP: um app em uso por 25 pessoas, 16 agentes com Claude e demos feitas do zero, com problema, o que fiz e resultado.">
+<title>Gabriela Dória · Portfólio: gestão por indicadores, dados e IA</title>
+<meta name="description" content="Portfólio de Gabriela Dória, Engenharia Ambiental na Poli-USP: gestão por indicadores na Poli Social (94,9% dos KPIs), um app em uso por 25 pessoas, 16 agentes de IA e demos com dados, com problema, o que fiz e resultado.">
 <meta name="author" content="Gabriela Dória">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:locale:alternate" content="en_US">
-<meta property="og:title" content="Gabriela Dória · Portfólio de IA">
-<meta property="og:description" content="Encontro o gargalo, construo a solução e meço se funcionou. Cinco casos com problema, o que eu fiz e resultado.">
+<meta property="og:title" content="Gabriela Dória · Portfólio">
+<meta property="og:description" content="Encontro o gargalo, construo a solução e meço se funcionou. Casos de gestão por indicadores e de IA, com problema, o que eu fiz e resultado.">
 <meta property="og:url" content="https://gabriela-doria.github.io/ai-portfolio/">
 <meta property="og:image" content="https://gabriela-doria.github.io/ai-portfolio/assets/foto-gabriela.jpg">
 <meta name="twitter:card" content="summary">
@@ -131,8 +131,9 @@ table.mx tfoot td{font-family:var(--f-mono);font-size:.64rem;color:var(--ink-3);
 .box.res .k{color:var(--petrol)}
 .flow .box:not(:last-child)::after{content:"→";position:absolute;right:-12px;top:50%;transform:translateY(-50%);color:var(--amber);font-weight:700;font-size:.9rem;z-index:1}
 @media (max-width:680px){.flow .box:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-15px;transform:translateX(-50%)}}
-.eq{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:0 0 12px}
-.eq .box{flex:1 1 120px;font-size:.82rem}
+.eq{display:flex;flex-wrap:nowrap;align-items:stretch;gap:6px;margin:0 0 12px}
+.eq .box{flex:1 1 0;min-width:0;font-size:.82rem}
+@media (max-width:680px){.eq{flex-wrap:wrap}.eq .box{flex:1 1 120px}}
 .eq .op{align-self:center;font-family:var(--f-display);font-weight:700;color:var(--amber);font-size:1.15rem}
 .nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;margin:0 0 12px}
 .nums div{border-left:3px solid var(--petrol);padding:2px 0 2px 9px}
@@ -171,6 +172,39 @@ table.mx tfoot td{font-family:var(--f-mono);font-size:.64rem;color:var(--ink-3);
 @media (max-width:680px){.next{grid-template-columns:1fr}}
 .box.dashed{border-style:dashed;background:transparent;color:var(--ink-2)}
 .foot{padding-top:12px;border-top:2px solid var(--ink);font-family:var(--f-mono);font-size:.68rem;color:var(--ink-3);line-height:1.8}
+
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px}
+.toc a{font-family:var(--f-mono);font-size:.72rem;text-decoration:none;color:var(--ink-2);border:1px solid var(--rule-strong);border-radius:999px;padding:4px 12px;background:var(--surface)}
+.toc a b{color:var(--petrol);margin-right:4px}
+.toc a:hover{border-color:var(--petrol);color:var(--petrol)}
+.part{display:flex;gap:16px;align-items:flex-start;margin:34px 0 6px;padding-top:16px;border-top:2px solid var(--ink)}
+.part>span{font-family:var(--f-display);font-weight:800;font-size:2.6rem;line-height:.9;color:var(--petrol)}
+.part h2.ph{font-family:var(--f-display);font-size:1.45rem;letter-spacing:-.01em;text-transform:none;color:var(--ink);font-weight:800;margin:0 0 4px}
+.part p{margin:0;color:var(--ink-2);font-size:.95rem;max-width:62ch}
+.okr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 10px}
+@media (max-width:680px){.okr{grid-template-columns:1fr}}
+.okr .o1{border:1px solid var(--rule);border-top:3px solid var(--petrol);border-radius:4px;background:var(--surface);padding:7px 10px;font-size:.84rem;line-height:1.35}
+.okr .o1 .k{display:block;font-family:var(--f-mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--petrol);margin-bottom:2px}
+.okr .o1.hi{background:var(--petrol-soft)}
+.shot.wide{max-width:none}
+.mxwrap{overflow-x:auto;margin:0 0 28px}
+.mxwrap table.mx{margin:0;min-width:640px}
+table.mx th span{display:inline-block;max-width:70px;line-height:1.2}
+.gallery{display:grid;grid-template-columns:1fr 1fr 190px;grid-template-areas:"a a d" "b c d";gap:10px;margin:2px 0 6px;align-items:start}
+.gallery .g1{grid-area:a}.gallery .g2{grid-area:b}.gallery .g3{grid-area:c}.gallery .g4{grid-area:d}
+@media (max-width:680px){.gallery{grid-template-columns:1fr;grid-template-areas:"a" "d" "b" "c"}.gallery .g4{max-width:240px}}
+.shot a{display:block}
+.gallery .shot{margin:0;max-width:none}
+.flow.two{grid-template-columns:1fr 1fr}
+@media (max-width:680px){.flow.two{grid-template-columns:1fr}}
+.nums.two{grid-template-columns:repeat(2,minmax(0,200px))}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:22px 32px;margin:10px 0 28px}
+@media (max-width:680px){.cols{grid-template-columns:minmax(0,1fr)}}
+.cols .t{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:2px}
+.cols .t.sp{margin-top:14px}
+.edu{display:grid;grid-template-columns:62px 1fr;gap:5px 10px;font-size:.9rem;line-height:1.4;margin-top:6px}
+.edu .yy{font-family:var(--f-mono);font-size:.68rem;color:var(--petrol);font-weight:600;padding-top:3px}
+.langs{font-family:var(--f-mono);font-size:.7rem;color:var(--ink-2);margin:12px 0 0}
 @media print{
   body{background:#fff;color:#000;font-size:9.5pt}
   .page{max-width:none;padding:0}
@@ -191,43 +225,50 @@ table.mx tfoot td{font-family:var(--f-mono);font-size:.64rem;color:var(--ink-3);
   <div class="who">
     <img src="assets/foto-gabriela.jpg" width="104" height="104" alt="Foto de Gabriela Dória">
     <div>
-      <p class="eyebrow">Portfólio de IA · <b>dados, automação e IA aplicada</b> · nov 2026</p>
+      <p class="eyebrow">Portfólio · <b>gestão por indicadores, dados e IA aplicada</b> · nov 2026</p>
       <h1>Gabriela <em>Dória</em></h1>
-      <p class="lede">Engenharia Ambiental na Poli-USP. <b>Encontro o gargalo, construo a solução e meço se funcionou</b>, com dados e IA no trabalho de todo dia.</p>
+      <p class="lede">Engenharia Ambiental na Poli-USP e três anos de consultoria de gestão, de consultora a diretora. <b>Encontro o gargalo, construo a solução e meço se funcionou</b>: com metas e indicadores na gestão, e com dados, automação e IA nas ferramentas.</p>
     </div>
   </div>
   <div class="contact">Poli-USP · formatura dez/2028<br>São Paulo · SP<br><a href="mailto:gabrielavsdoria@gmail.com">gabrielavsdoria@gmail.com</a><br><a href="https://www.linkedin.com/in/gabriela-vs-doria/">linkedin.com/in/gabriela-vs-doria</a><br><a href="https://github.com/gabriela-doria">github.com/gabriela-doria</a></div>
 </header>
 
 <section class="figures" aria-label="Números">
+  <div class="fig"><b>94,9<span>%</span></b><small>atingimento médio dos KPIs da área que dirigi (2025)</small></div>
+  <div class="fig"><b>30 <span>/ 14</span></b><small>reuniões com a ONG atendida: realizado / meta</small></div>
   <div class="fig"><b>25</b><small>pessoas usam o app que programei com Claude Code</small></div>
   <div class="fig"><b>16</b><small>agentes de IA que desenhei e opero</small></div>
-  <div class="fig"><b>64<span>%</span> → 100<span>%</span></b><small>energia aproveitada na simulação (dados fictícios)</small></div>
-  <div class="fig"><b>94,9<span>%</span></b><small>atingimento médio dos KPIs da área que dirigi</small></div>
 </section>
 
-<h2><b>Como eu trabalho</b> · o mesmo ciclo em todos os casos</h2>
+<nav class="toc" aria-label="Nesta página">
+  <a href="#gestao"><b>1</b> Gestão por indicadores</a>
+  <a href="#ia"><b>2</b> Dados, automação e IA</a>
+  <a href="#empreender"><b>3</b> Empreendedorismo e repertório</a>
+  <a href="#ferramentas"><b>4</b> Ferramentas e formação</a>
+</nav>
+
+<h2><b>Como eu trabalho</b> · o mesmo ciclo na gestão e na tecnologia</h2>
 <div class="cycle">
-<svg viewBox="0 0 880 170" role="img" aria-label="Ciclo: 1 Encontrar o gargalo, 2 Construir com IA, 3 Medir, e volta ao início">
+<svg viewBox="0 0 880 170" role="img" aria-label="Ciclo: 1 Encontrar o gargalo, 2 Construir a solução, 3 Medir, e volta ao início">
   <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="arrh"/></marker></defs>
   <rect class="node" x="4" y="10" width="270" height="100" rx="5"/>
   <text class="num" x="20" y="42">1</text><text class="ttl" x="44" y="40">Encontrar o gargalo</text>
-  <text class="sub" x="20" y="66">mapeio o processo</text><text class="sub" x="20" y="82">e escolho a métrica</text><text class="sub" x="20" y="98">antes da ferramenta</text>
+  <text class="sub" x="20" y="66">diagnóstico, pesquisa, dados</text><text class="sub" x="20" y="82">o que trava e por quê</text><text class="sub" x="20" y="98">métrica antes da ferramenta</text>
   <rect class="node" x="304" y="10" width="270" height="100" rx="5"/>
-  <text class="num" x="320" y="42">2</text><text class="ttl" x="344" y="40">Construir com IA</text>
-  <text class="sub" x="320" y="66">Claude Code · agentes · Apps Script</text><text class="sub" x="320" y="82">a IA propõe, eu decido</text><text class="sub" x="320" y="98">nada sai sem o meu ok</text>
+  <text class="num" x="320" y="42">2</text><text class="ttl" x="344" y="40">Construir a solução</text>
+  <text class="sub" x="320" y="66">OKRs, processos, pessoas</text><text class="sub" x="320" y="82">apps, automações, agentes de IA</text><text class="sub" x="320" y="98">feita para durar sem mim</text>
   <rect class="node hi" x="604" y="10" width="272" height="100" rx="5"/>
   <text class="num" x="620" y="42">3</text><text class="ttl" x="644" y="40">Medir</text>
-  <text class="sub" x="620" y="66">testes automáticos e contagens</text><text class="sub" x="620" y="82">estimativa dita como estimativa</text><text class="sub" x="620" y="98">dado fictício marcado</text>
+  <text class="sub" x="620" y="66">realizado × meta, NPS, adesão</text><text class="sub" x="620" y="82">testes automáticos e contagens</text><text class="sub" x="620" y="98">estimativa dita como estimativa</text>
   <path class="arr" d="M276 60 H300" marker-end="url(#ah)"/>
   <path class="arr" d="M576 60 H600" marker-end="url(#ah)"/>
   <path class="arr" d="M740 112 V140 H140 V114" marker-end="url(#ah)"/>
   <text class="loop" x="440" y="158" text-anchor="middle">→ volto ao passo 1 com o que a medição mostrou</text>
 </svg>
 <ol class="cyclist">
-  <li><b>1 · Encontrar o gargalo</b>mapeio o processo e escolho a métrica antes da ferramenta</li>
-  <li><b>2 · Construir com IA</b>Claude Code · agentes · Apps Script. A IA propõe, eu decido.</li>
-  <li class="hi"><b>3 · Medir</b>testes automáticos e contagens; estimativa e dado fictício marcados</li>
+  <li><b>1 · Encontrar o gargalo</b>diagnóstico, pesquisa e dados: o que trava e por quê</li>
+  <li><b>2 · Construir a solução</b>OKRs, processos e pessoas; apps, automações e agentes de IA</li>
+  <li class="hi"><b>3 · Medir</b>realizado × meta, NPS, adesão, testes e contagens</li>
   <li class="loop">↺ volto ao passo 1 com o que a medição mostrou</li>
 </ol>
 </div>
@@ -236,169 +277,92 @@ table.mx tfoot td{font-family:var(--f-mono);font-size:.64rem;color:var(--ink-3);
 <div class="tl">
 <svg viewBox="0 0 880 96" role="img" aria-label="Linha do tempo de 2020 a 2026">
   <line class="axis" x1="20" y1="32" x2="860" y2="32"/>
-  <circle cx="45" cy="32" r="5"/><text class="y" x="45" y="18" text-anchor="middle">2020</text><text x="45" y="52" text-anchor="middle">Megève</text><text x="45" y="65" text-anchor="middle">fundadora</text>
-  <circle cx="165" cy="32" r="5"/><text class="y" x="165" y="18" text-anchor="middle">2022</text><text x="165" y="52" text-anchor="middle">Summer@INSEAD</text>
-  <circle cx="285" cy="32" r="5"/><text class="y" x="285" y="18" text-anchor="middle">2023</text><text x="285" y="52" text-anchor="middle">Poli-USP</text><text x="285" y="65" text-anchor="middle">Poli Social</text>
-  <circle cx="405" cy="32" r="5"/><text class="y" x="405" y="18" text-anchor="middle">nov/2024</text><text x="405" y="52" text-anchor="middle">Diretora</text><text x="405" y="65" text-anchor="middle">de Projetos</text>
-  <circle cx="525" cy="32" r="7" class="hi"/><text class="y hi" x="525" y="18" text-anchor="middle">set/2026</text><text class="hi" x="525" y="52" text-anchor="middle">Drive Areia Viva</text><text class="hi" x="525" y="65" text-anchor="middle">Personal OS</text>
-  <circle cx="645" cy="32" r="7" class="hi"/><text class="y hi" x="645" y="18" text-anchor="middle">out/2026</text><text class="hi" x="645" y="52" text-anchor="middle">Rota do Excedente</text>
-  <circle cx="765" cy="32" r="7" class="hi"/><text class="y hi" x="765" y="18" text-anchor="middle">nov/2026</text><text class="hi" x="765" y="52" text-anchor="middle">App Areia Viva</text><text class="hi" x="765" y="65" text-anchor="middle">Campus de energia</text>
+  <circle cx="45" cy="32" r="6" class="hi"/><text class="y hi" x="45" y="18" text-anchor="middle">out/2020</text><text class="hi" x="45" y="52" text-anchor="middle">Megève</text><text x="45" y="65" text-anchor="middle">fundadora</text>
+  <circle cx="160" cy="32" r="5"/><text class="y" x="160" y="18" text-anchor="middle">2022</text><text x="160" y="52" text-anchor="middle">Summer@INSEAD</text>
+  <circle cx="275" cy="32" r="6" class="hi"/><text class="y hi" x="275" y="18" text-anchor="middle">mar/2023</text><text class="hi" x="275" y="52" text-anchor="middle">Poli Social</text><text x="275" y="65" text-anchor="middle">consultora</text>
+  <circle cx="390" cy="32" r="6" class="hi"/><text class="y hi" x="390" y="18" text-anchor="middle">nov/2023</text><text class="hi" x="390" y="52" text-anchor="middle">Gerente</text><text x="390" y="65" text-anchor="middle">time de 5</text>
+  <circle cx="505" cy="32" r="6" class="hi"/><text class="y hi" x="505" y="18" text-anchor="middle">nov/2024</text><text class="hi" x="505" y="52" text-anchor="middle">Diretora</text><text x="505" y="65" text-anchor="middle">OKRs da área</text>
+  <circle cx="620" cy="32" r="6" class="hi"/><text class="y hi" x="620" y="18" text-anchor="middle">set/2026</text><text class="hi" x="620" y="52" text-anchor="middle">Areia Viva</text><text x="620" y="65" text-anchor="middle">Personal OS</text>
+  <circle cx="735" cy="32" r="6" class="hi"/><text class="y hi" x="735" y="18" text-anchor="middle">out/2026</text><text class="hi" x="735" y="52" text-anchor="middle">Rota do</text><text x="735" y="65" text-anchor="middle">Excedente</text>
+  <circle cx="845" cy="32" r="6" class="hi"/><text class="y hi" x="845" y="18" text-anchor="end">nov/2026</text><text class="hi" x="845" y="52" text-anchor="end">app em uso</text><text x="845" y="65" text-anchor="end">Campus</text>
 </svg>
 <ul class="tlist">
-  <li><b>2020</b>Chocolates Megève · fundadora</li>
+  <li class="hi"><b>out/2020</b>Chocolates Megève · fundadora</li>
   <li><b>2022</b>Summer@INSEAD</li>
-  <li><b>2023</b>Poli-USP · Poli Social</li>
-  <li><b>nov/2024</b>Diretora de Projetos</li>
-  <li class="hi"><b>set/2026</b>Drive do Areia Viva · Personal OS</li>
+  <li class="hi"><b>mar/2023</b>Poli Social · consultora</li>
+  <li class="hi"><b>nov/2023</b>Gerente de Projetos, time de 5</li>
+  <li class="hi"><b>nov/2024</b>Diretora de Projetos, OKRs da área</li>
+  <li class="hi"><b>set/2026</b>Areia Viva · Personal OS</li>
   <li class="hi"><b>out/2026</b>Rota do Excedente</li>
-  <li class="hi"><b>nov/2026</b>App do Areia Viva · Campus de energia</li>
+  <li class="hi"><b>nov/2026</b>App do Areia Viva em uso · Campus de energia</li>
 </ul>
 </div>
 
-<h2 id="vaga"><b>O que uma vaga de IA pede</b> · e onde está a prova</h2>
+<h2><b>Competências × casos</b> · onde está a prova de cada uma</h2>
+<div class="mxwrap">
 <table class="mx">
-<thead><tr><th></th><th>Areia Viva</th><th>Personal OS</th><th>Campus</th><th>Rota</th><th>QGIS</th></tr></thead>
-<tbody><tr><td>Automação que economiza horas</td><td><span class="d" title="prova publicada"></span></td><td><span class="d" title="prova publicada"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Ferramenta no ar, usada por outras pessoas</td><td><span class="d" title="prova publicada"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Agente que resolve um problema</td><td><span class="o"></span></td><td><span class="d" title="prova publicada"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Dashboard</td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="d" title="prova publicada"></span></td><td><span class="o"></span></td></tr><tr><td>Demo feita do zero</td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="d" title="prova publicada"></span></td><td><span class="d" title="prova publicada"></span></td><td><span class="o"></span></td></tr><tr><td>Prompt engineering</td><td><span class="d" title="prova publicada"></span></td><td><span class="d" title="prova publicada"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Orquestração de agentes (Claude)</td><td><span class="o"></span></td><td><span class="d" title="prova publicada"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Código com agente de IA (vibe coding)</td><td><span class="d" title="prova publicada"></span></td><td><span class="o"></span></td><td><span class="d" title="prova publicada"></span></td><td><span class="d" title="prova publicada"></span></td><td><span class="o"></span></td></tr><tr><td>API sem backend próprio</td><td><span class="d" title="prova publicada"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Análise de dados com IA</td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="d" title="prova publicada"></span></td><td><span class="o"></span></td><td><span class="d" title="prova publicada"></span></td></tr><tr class="pl"><td>Automação com n8n, Make ou Zapier</td><td colspan="5"><span class="chip dash">planejado</span></td></tr><tr class="pl"><td>Orquestração entre modelos (Claude + Gemini)</td><td colspan="5"><span class="chip dash">planejado</span></td></tr></tbody>
-<tfoot><tr><td colspan="6"><span class="d"></span> prova publicada no caso &nbsp; <span class="o"></span> não se aplica &nbsp; <span class="chip dash">planejado</span> ainda sem prova</td></tr></tfoot>
+<thead><tr><th></th><th><span>Diretoria</span></th><th><span>Edital</span></th><th><span>Inovação</span></th><th><span>Palavras de Paz</span></th><th><span>Areia Viva</span></th><th><span>Personal OS</span></th><th><span>Campus</span></th><th><span>Rota</span></th><th><span>QGIS</span></th><th><span>Megève</span></th></tr></thead>
+<tbody><tr><td>Gestão por indicadores (OKRs e KPIs)</td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Liderança de pessoas</td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Decisão com critério explícito</td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Diagnóstico e resolução de problemas</td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td></tr><tr><td>Dados, planilhas e dashboards</td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td></tr><tr><td>Automação e agentes de IA</td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Ferramenta em uso por outras pessoas</td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Código com agente de IA</td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Visão de ponta a ponta</td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="d"></span></td></tr></tbody>
+<tfoot><tr><td colspan="11"><span class="d"></span> exercitada no caso &nbsp; <span class="o"></span> não é o foco</td></tr></tfoot>
 </table>
-
-<h2 id="casos"><b>Cinco casos</b> · problema → o que eu fiz → resultado</h2>
-<div class="cases">
-
-<article class="case" id="areia-viva">
-  <div class="meta"><b>Areia Viva · 2026</b>extensão USP, voluntária<br>Drive set/2026 · app nov/2026<span class="tag">em uso</span></div>
-  <div>
-    <h3>Um app de horas que 25 pessoas usam, programado com Claude Code</h3>
-    <div class="flow">
-      <div class="box"><span class="k">Problema</span>As horas eram registradas no computador, muitas vezes meses depois. O Drive não tinha regra de nome, pasta nem acesso.</div>
-      <div class="box"><span class="k">O que eu fiz</span>Reestruturei o Drive com matriz de decisão e scripts que simulam antes de rodar. Construí o app: celular, login Google, acesso por papel.</div>
-      <div class="box res"><span class="k">Resultado</span>App em uso por 25 pessoas desde 13/11/2026. As horas passaram a ser registradas no mesmo dia.</div>
-    </div>
-    <div class="eq">
-      <div class="box"><span class="k">set/2026</span>Drive reestruturado</div><span class="op">→</span>
-      <div class="box"><span class="k">1ª versão</span>Mapa do Drive em Apps Script</div><span class="op">→</span>
-      <div class="box res"><span class="k">nov/2026</span>App em Firebase, 32 testes das regras de acesso</div>
-    </div>
-    <div class="nums">
-      <div><b>25</b><small>pessoas usam o app</small></div>
-      <div><b>32</b><small>testes automáticos</small></div>
-      <div><b>124</b><small>arquivos renomeados</small></div>
-      <div><b>33</b><small>contas com acesso por papel</small></div>
-      <div><b>62</b><small>pastas na nova estrutura</small></div>
-    </div>
-    <figure class="shot"><img src="assets/app-areia-viva-demo.jpg" width="700" height="525" loading="lazy" alt="Tela do painel do app do Areia Viva, com horas e tarefas, no modo de demonstração"><figcaption><b>App do Areia Viva</b> · tela no modo de demonstração, com dados fictícios</figcaption></figure>
-    <div class="chips"><span class="chip on">Claude Code</span><span class="chip on">Firebase</span><span class="chip">Google Apps Script</span><span class="chip">API do Drive</span><span class="chip">4 prompts reutilizáveis</span></div>
-    <p class="how">Como medi: as contagens saem dos registros dos scripts. A mudança no dia a dia ainda não tem número; o plano de medição está no repositório.</p>
-    <div class="link"><a href="https://github.com/gabriela-doria/student-project-ops-ai">repositório · student-project-ops-ai</a></div>
-  </div>
-</article>
-
-<article class="case" id="personal-os">
-  <div class="meta"><b>Personal OS · 2026</b>projeto pessoal<br>desde set/2026<span class="tag">agentes</span></div>
-  <div>
-    <h3>16 agentes de IA que organizam faculdade, extensão e busca de estágio</h3>
-    <div class="flow">
-      <div class="box"><span class="k">Problema</span>Informação espalhada em vários sistemas. O gargalo era coordenar: o que vence primeiro e onde está cada arquivo.</div>
-      <div class="box"><span class="k">O que eu fiz</span>Escrevi 16 skills do Claude que leem as fontes e propõem ações, mais um radar que dá nota de 0 a 100 a cada vaga.</div>
-      <div class="box res"><span class="k">Resultado</span>273 e-mails arquivados e 163 arquivos renomeados na primeira rodada.</div>
-    </div>
-    <div class="eq">
-      <div class="box"><span class="k">Fontes</span>Gmail · Agenda · Drive · Moodle</div><span class="op">→</span>
-      <div class="box"><span class="k">Agentes</span>16 skills propõem</div><span class="op">→</span>
-      <div class="box"><span class="k">Eu</span>aprovo ou corrijo</div><span class="op">→</span>
-      <div class="box res"><span class="k">Ação</span>arquiva, renomeia, agenda</div>
-    </div>
-    <div class="nums">
-      <div><b>273</b><small>e-mails arquivados</small></div>
-      <div><b>163</b><small>arquivos renomeados</small></div>
-      <div><b>~80 min</b><small>por semana na coleta de aulas (estimativa)</small></div>
-      <div><b>275</b><small>peças no Mapa do Sistema</small></div>
-    </div>
-    <div class="chips"><span class="chip on">Claude (skills, MCP, tarefas agendadas)</span><span class="chip">Google Apps Script</span><span class="chip">Python</span></div>
-    <p class="how">Como medi: contagem nos registros de execução (29/10/2026). O tempo poupado é estimativa minha, sem linha de base.</p>
-    <div class="link"><a href="https://github.com/gabriela-doria/personal-os-claude">repositório · personal-os-claude</a> · <a href="https://github.com/gabriela-doria/personal-os-claude/tree/main/skills/radar-estagios">radar de estágios</a></div>
-  </div>
-</article>
-
-<article class="case" id="campus">
-  <div class="meta"><b>Campus de energia</b>exercício pessoal<br>nov/2026<span class="tag">dados fictícios</span></div>
-  <div>
-    <h3>Qual cliente aproveita a energia que a rede não recebe</h3>
-    <div class="flow">
-      <div class="box"><span class="k">Problema</span>Um parque eólico e solar gera mais do que cabe na linha de conexão.</div>
-      <div class="box"><span class="k">O que eu fiz</span>Simulação hora a hora com programação linear, preço-sombra e matriz de decisão para 3 clientes. Problema e critérios meus; código com o Claude.</div>
-      <div class="box res"><span class="k">Resultado</span>Com um data center ao lado, o parque aproveita toda a energia e a receita da semana sobe 96%.</div>
-    </div>
-    <div class="bars">
-      <div class="bar"><span>Sem cliente ao lado</span><span class="trk"><span class="fill amb" style="width:64.1%"></span></span><span class="v">64,1%</span></div>
-      <div class="bar"><span>Com data center</span><span class="trk"><span class="fill" style="width:100%"></span></span><span class="v">100%</span></div>
-    </div>
-    <div class="chips"><span class="chip on">Claude (agente de código)</span><span class="chip">Python</span><span class="chip">SciPy</span><span class="chip">programação linear</span></div>
-    <p class="how">Como medi: 6 testes automáticos, entre eles a conta à mão contra o modelo e o preço-sombra com 1 MW a mais e a menos.</p>
-    <div class="link"><a href="https://github.com/gabriela-doria/campus-de-energia">repositório · campus-de-energia</a></div>
-  </div>
-</article>
-
-<article class="case" id="rota">
-  <div class="meta"><b>Rota do Excedente</b>case de desafio de IA<br>out/2026<span class="tag">dados fictícios</span></div>
-  <div>
-    <h3>Comida que sobra em restaurantes até cozinhas solidárias</h3>
-    <div class="flow">
-      <div class="box"><span class="k">Problema</span>Restaurantes têm comida sobrando e as cozinhas não têm como buscar. Hipótese: falta transporte.</div>
-      <div class="box"><span class="k">O que eu fiz</span>Algoritmo que agrupa restaurantes em rotas, calcula o custo por kg e descarta rota que não se paga. Página com premissas editáveis.</div>
-      <div class="box res"><span class="k">Resultado</span>No exemplo, 128 kg resgatados a R$ 1,64 por kg, contra R$ 12,00 para comprar.</div>
-    </div>
-    <div class="funnel">
-      <div class="fun"><span>Restaurantes</span><span class="seg" style="width:100%">16</span></div>
-      <div class="fun"><span>Rotas</span><span class="seg l2" style="width:37.5%">6</span></div>
-      <div class="fun"><span>Resgatados</span><span class="seg l3" style="width:60%">128 kg</span></div>
-    </div>
-    <div class="bars">
-      <div class="bar"><span>Custo por kg, pela rota</span><span class="trk"><span class="fill" style="width:13.7%"></span></span><span class="v">R$ 1,64</span></div>
-      <div class="bar"><span>Custo por kg, comprando</span><span class="trk"><span class="fill amb" style="width:100%"></span></span><span class="v">R$ 12,00</span></div>
-    </div>
-    <div class="chips"><span class="chip on">Claude (agente de código)</span><span class="chip">JavaScript</span><span class="chip">Leaflet · OpenStreetMap</span></div>
-    <p class="how">Como medi: o algoritmo descarta a rota quando o custo por kg passa do custo de comprar. Os valores em reais são hipóteses; proponho um piloto de 4 semanas para medir em campo.</p>
-    <div class="link"><a href="https://gabriela-doria.github.io/rota-do-excedente/">demo ao vivo</a> · <a href="https://github.com/gabriela-doria/rota-do-excedente">repositório</a></div>
-  </div>
-</article>
-
-<article class="case" id="qgis">
-  <div class="meta"><b>Análise espacial</b>Geoprocessamento, Poli-USP<br>1º sem/2026 · grupo de 3<span class="tag">dados públicos</span></div>
-  <div>
-    <h3>Metrô, renda e área construída em São Paulo, no QGIS</h3>
-    <div class="flow">
-      <div class="box"><span class="k">Problema</span>A renda dos distritos acompanha o acesso ao metrô? Onde a cidade mais cresceu de 2010 a 2022?</div>
-      <div class="box"><span class="k">O que eu fiz</span>Cruzei Censo 2022, Pesquisa OD 2023 e IPTU com raios de 800 m nas 94 estações. Claude como guia de método e código.</div>
-      <div class="box res"><span class="k">Resultado</span>Em 46 dos 96 distritos, nenhum morador está a até 800 m de uma estação.</div>
-    </div>
-    <div class="bars">
-      <div class="bar"><span>Distritos sem metrô a 800 m</span><span class="trk"><span class="fill amb" style="width:47.9%"></span></span><span class="v">46 / 96</span></div>
-      <div class="bar"><span>Área construída, Lapa</span><span class="trk"><span class="fill" style="width:100%"></span></span><span class="v">+25,5%</span></div>
-      <div class="bar"><span>Área construída, Capela do Socorro</span><span class="trk"><span class="fill" style="width:66.7%"></span></span><span class="v">+17,0%</span></div>
-    </div>
-    <div class="chips"><span class="chip">QGIS</span><span class="chip">Python · geopandas</span><span class="chip">Google Earth Engine</span><span class="chip on">Claude (guia de método)</span></div>
-    <p class="how">Trabalho em grupo; os mapas citados são os que eu fiz. Limites escritos no repositório: população uniforme no setor e distância em linha reta.</p>
-    <div class="link"><a href="https://github.com/gabriela-doria/analise-espacial-qgis-sp">repositório com os mapas</a></div>
-  </div>
-</article>
 </div>
 
-<h2 id="gestao"><b>Além da IA</b> · indicadores, inovação e pessoas na Poli Social, 2023 – 2025</h2>
-<div class="beyond">
-  <div class="bars">
-    <div class="bar"><span>KPIs da área que dirigi, 2025</span><span class="trk"><span class="fill" style="width:94.9%"></span></span><span class="v">94,9%</span></div>
-    <div class="bar"><span>Meta de relacionamento com as ONGs</span><span class="trk"><span class="fill" style="width:100%"></span><span class="goal" style="left:46.7%"></span></span><span class="v">214,3%</span></div>
-    <div class="bar"><span>Grupo de Inovação: modelo aprovado</span><span class="trk"><span class="fill amb" style="width:84.2%"></span></span><span class="v">84,2%</span></div>
-    <div class="bar"><span>Grupo de Inovação: proposta final</span><span class="trk"><span class="fill amb" style="width:83.3%"></span></span><span class="v">83,3%</span></div>
-    <div class="bar"><span>NPS da ONG no projeto de 10 meses</span><span class="trk"><span class="fill" style="width:100%"></span></span><span class="v">100</span></div>
+<!-- ===================== PARTE 1 ===================== -->
+<div class="part" id="gestao"><span>1</span><div><h2 class="ph">Gestão por indicadores</h2><p>Poli Social, a consultoria de gestão pro bono da Poli-USP para ONGs. Três anos, de consultora a diretora de Projetos.</p></div></div>
+<div class="cases">
+
+<article class="case" id="diretoria"><div class="meta"><b>Poli Social · 2025</b>Diretora de Projetos<br>nov/2024 – nov/2025<span class="tag">OKRs e KPIs</span></div><div><h3>Gerir uma área inteira por indicadores</h3><div class="flow"><div class="box"><span class="k">Problema</span>Responder pelo método, pelas pessoas, pelo portfólio de projetos e pela relação com a ONG atendida.</div><div class="box"><span class="k">O que eu fiz</span>Desenhei os OKRs da área: 3 objetivos e 15 resultados-chave. Acompanhamento quinzenal e revisão do plano a cada quadrimestre.</div><div class="box res"><span class="k">Resultado</span>Indicadores, relacionamento e NPS da ONG acima da meta no fim do ano.</div></div><div class="okr"><div class="o1"><span class="k">OKR 1 · pessoas</span>Pertencimento e desenvolvimento dos consultores</div><div class="o1 hi"><span class="k">OKR 2 · cliente</span>Impacto notório na realidade da ONG</div><div class="o1"><span class="k">OKR 3 · processo</span>Profissionalizar a área com planejamento e conhecimento compartilhado</div></div><div class="bars"><div class="bar"><span>KPIs da área · atingimento médio</span><span class="trk"><span class="fill" style="width:94.9%"></span></span><span class="v">94,9%</span></div><div class="bar"><span>Reuniões com a ONG · meta 14</span><span class="trk"><span class="fill" style="width:100%"></span><span class="goal" style="left:46.7%"></span></span><span class="v">30</span></div><div class="bar"><span>Encontros presenciais · meta 4</span><span class="trk"><span class="fill" style="width:100%"></span><span class="goal" style="left:80%"></span></span><span class="v">5</span></div><div class="bar"><span>NPS da ONG · 3 ciclos</span><span class="trk"><span class="fill" style="width:93.3%"></span></span><span class="v">100·80·100</span></div><div class="bar"><span>Reuniões de planejamento das OKRs</span><span class="trk"><span class="fill" style="width:100%"></span></span><span class="v">4 / 4</span></div></div><figure class="shot wide"><a href="assets/okr-projetos-2025-planilha.jpg"><img src="assets/okr-projetos-2025-planilha.jpg" width="2250" height="458" loading="lazy" alt="Print da planilha de OKRs da área de Projetos da Poli Social em 2025, com objetivos, resultados-chave, valores inicial, atual e esperado e percentual"></a><figcaption><b>A ferramenta</b> · planilha de OKRs da área de Projetos, 2025: cada resultado-chave com valor inicial, atual e esperado (clique para ampliar)</figcaption></figure><div class="chips"><span class="chip on">OKRs</span><span class="chip on">KPIs</span><span class="chip on">NPS</span><span class="chip">Excel</span><span class="chip">Google Sheets</span><span class="chip">rituais quinzenais</span></div><p class="how">Fonte: relatório de atividades 2025 da Poli Social e planilha de OKRs da área.</p></div></article>
+
+<article class="case" id="edital"><div class="meta"><b>Poli Social · 2025</b>Edital de consultoria<br>condução do processo<span class="tag">decisão com critério</span></div><div><h3>Escolher o cliente do ano com critério, não com intuição</h3><div class="flow"><div class="box"><span class="k">Problema</span>Escolher, entre as inscritas, a ONG que receberia a consultoria do ano.</div><div class="box"><span class="k">O que eu fiz</span>Edital e contrato; análise da documentação institucional, financeira e jurídica; entrevistas; avaliação multicritério.</div><div class="box res"><span class="k">Resultado</span>Escolha defendida por critérios explícitos, de 18 inscrições para 1 ONG.</div></div><div class="funnel"><div class="fun"><span>Inscrições analisadas</span><span class="seg" style="width:100%">18</span></div><div class="fun"><span>Entrevistas</span><span class="seg l2" style="width:33.3%">6</span></div><div class="fun"><span>Selecionada</span><span class="seg l3" style="width:9%">1</span></div></div><div class="chips"><span class="chip on">avaliação multicritério</span><span class="chip">análise financeira</span><span class="chip">análise jurídica</span></div></div></article>
+
+<article class="case" id="inovacao"><div class="meta"><b>Poli Social · 2025</b>Grupo de Inovação<br>criado do zero<span class="tag">inovação</span></div><div><h3>Dar dono às ideias que surgiam e morriam na entidade</h3><div class="flow"><div class="box"><span class="k">Problema</span>Ideias surgiam nas reuniões e morriam sem dono, sem método e sem prazo.</div><div class="box"><span class="k">O que eu fiz</span>Desenhei o modelo do Grupo de Inovação, levei a uma assembleia de 40 membros e liderei 7 pessoas do diagnóstico à solução, priorizada por matriz impacto-esforço.</div><div class="box res"><span class="k">Resultado</span>Modelo aprovado por 84,2% e proposta final por 83,3%, em cerca de 8 meses.</div></div><div class="eq"><div class="box"><span class="k">1 · modelo</span>papéis, ritos e regras</div><span class="op">→</span><div class="box"><span class="k">2 · assembleia</span>40 membros votam</div><span class="op">→</span><div class="box"><span class="k">3 · diagnóstico</span>time de 7 levanta problemas</div><span class="op">→</span><div class="box"><span class="k">4 · priorização</span>matriz impacto-esforço</div><span class="op">→</span><div class="box res"><span class="k">5 · proposta</span>aprovada em assembleia</div></div><div class="bars"><div class="bar"><span>Modelo aprovado em assembleia</span><span class="trk"><span class="fill amb" style="width:84.2%"></span></span><span class="v">84,2%</span></div><div class="bar"><span>Proposta final aprovada</span><span class="trk"><span class="fill amb" style="width:83.3%"></span></span><span class="v">83,3%</span></div></div><div class="chips"><span class="chip on">matriz impacto-esforço</span><span class="chip">facilitação</span><span class="chip">gestão de pessoas</span></div></div></article>
+
+<article class="case" id="palavras-de-paz"><div class="meta"><b>Poli Social · 2024</b>Gerente de Projetos<br>time de 5 · 10 meses<span class="tag">dados de gestão</span></div><div><h3>Dar números a uma ONG grande em alcance e pequena em estrutura</h3><div class="flow"><div class="box"><span class="k">Problema</span>A ONG Palavras de Paz tinha cerca de 250 voluntários e atendia de 6 a 13 mil pessoas por ano, sem dados de gestão para decidir.</div><div class="box"><span class="k">O que eu fiz</span>Liderei 5 consultores do diagnóstico à entrega: pesquisa com voluntários, nova Missão, Visão e Valores, metas em OKRs, pesquisa de clima mensal e dashboard em Power BI com 2021 a 2024.</div><div class="box res"><span class="k">Resultado</span>19 entregáveis no prazo, NPS da ONG de 100 e uma linha de base para medir a evolução.</div></div><div class="bars"><div class="bar"><span>Voluntários que conheciam os objetivos do ano</span><span class="trk"><span class="fill amb" style="width:21.9%"></span></span><span class="v">21,9%</span></div><div class="bar"><span>NPS da ONG no fim do projeto</span><span class="trk"><span class="fill" style="width:100%"></span></span><span class="v">100</span></div></div><div class="nums "><div><b>250</b><small>voluntários na ONG</small></div><div><b>32</b><small>respostas na pesquisa de diagnóstico</small></div><div><b>19</b><small>entregáveis</small></div><div><b>2021–24</b><small>anos no dashboard</small></div></div><div class="chips"><span class="chip on">Power BI</span><span class="chip on">pesquisa de clima</span><span class="chip on">OKRs</span><span class="chip">diagnóstico</span><span class="chip">MVV</span></div><p class="how">O diagnóstico mostrou que só 21,9% dos voluntários conheciam os objetivos do ano: foi o ponto de partida das metas em OKRs.</p></div></article>
+
+<article class="case" id="novos-valores"><div class="meta"><b>Poli Social · 2023</b>Consultora de Projetos<br>mar – nov/2023<span class="tag">receita</span></div><div><h3>Diversificar a receita de uma ONG que dependia de dois doadores</h3><div class="flow"><div class="box"><span class="k">Problema</span>No Instituto Novos Valores, 90% dos custos vinham de dois doadores.</div><div class="box"><span class="k">O que eu fiz</span>Criei a identidade de marca (manual de 24 páginas) para a captação, e mapeei as exigências e acompanhei o cadastro na Nota Fiscal Paulista.</div><div class="box res"><span class="k">Resultado</span>Marca usada na captação de investidores e voluntários e uma nova fonte de receita em cadastro.</div></div><div class="nums two"><div><b>90%</b><small>dos custos vinham de 2 doadores</small></div><div><b>24</b><small>páginas no manual de marca</small></div></div></div></article>
+</div>
+
+<!-- ===================== PARTE 2 ===================== -->
+<div class="part" id="ia"><span>2</span><div><h2 class="ph">Dados, automação e IA</h2><p>O mesmo ciclo levado para a tecnologia: um app em uso, agentes que trabalho todo dia e demos com dados fictícios.</p></div></div>
+<div class="cases">
+
+<article class="case" id="areia-viva"><div class="meta"><b>Areia Viva · 2026</b>extensão USP, voluntária<br>Drive set/2026 · app nov/2026<span class="tag">em uso</span></div><div><h3>Um app de gestão que 25 pessoas usam, programado com Claude Code</h3><div class="flow"><div class="box"><span class="k">Problema</span>As horas eram registradas no computador, muitas vezes meses depois; tarefas sem dono e um Drive sem regra de nome, pasta nem acesso.</div><div class="box"><span class="k">O que eu fiz</span>Reestruturei o Drive com matriz de decisão e scripts que simulam antes de rodar. Construí o app: horas pelo celular, tarefas com dono e prazo, eventos e mapa do Drive, com login Google e acesso por papel.</div><div class="box res"><span class="k">Resultado</span>App em uso por 25 pessoas desde 13/11/2026. As horas passaram a ser registradas no mesmo dia.</div></div><div class="eq"><div class="box"><span class="k">set/2026</span>Drive reestruturado</div><span class="op">→</span><div class="box"><span class="k">1ª versão</span>Mapa do Drive em Apps Script</div><span class="op">→</span><div class="box res"><span class="k">nov/2026</span>App em Firebase: painel, tarefas, horas, eventos</div></div><div class="nums "><div><b>25</b><small>pessoas usam o app</small></div><div><b>32</b><small>testes das regras de acesso</small></div><div><b>124</b><small>arquivos renomeados</small></div><div><b>33</b><small>contas com acesso por papel</small></div><div><b>62</b><small>pastas na nova estrutura</small></div></div><div class="gallery"><figure class="shot g1"><a href="assets/app-areia-viva-painel.jpg"><img src="assets/app-areia-viva-painel.jpg" width="1100" height="760" loading="lazy" alt="Painel pessoal do app: próxima tarefa, horas que faltam para a meta e próximo evento"></a><figcaption><b>Meu painel</b> · o que fazer agora, horas e próximo evento</figcaption></figure><figure class="shot g2"><a href="assets/app-areia-viva-tarefas.jpg"><img src="assets/app-areia-viva-tarefas.jpg" width="1100" height="760" loading="lazy" alt="Lista de tarefas do app com frente, responsável, prazo e estado"></a><figcaption><b>Tarefas</b> · dono, prazo e estado; lista, quadro e cronograma</figcaption></figure><figure class="shot g3"><a href="assets/app-areia-viva-horas.jpg"><img src="assets/app-areia-viva-horas.jpg" width="1100" height="620" loading="lazy" alt="Tela de horas: quanto falta para a meta e ritmo por semana"></a><figcaption><b>Horas</b> · meta, ritmo semanal e lançamentos</figcaption></figure><figure class="shot g4 phone"><a href="assets/app-areia-viva-celular.jpg"><img src="assets/app-areia-viva-celular.jpg" width="390" height="844" loading="lazy" alt="O app no celular"></a><figcaption><b>No celular</b> · onde as horas são lançadas</figcaption></figure></div><p class="how">Telas no modo de demonstração, com dados fictícios. Como medi: as contagens saem dos registros dos scripts; a mudança no dia a dia ainda não tem número.</p><div class="chips"><span class="chip on">Claude Code</span><span class="chip on">Firebase</span><span class="chip">Google Apps Script</span><span class="chip">API do Drive</span><span class="chip">4 prompts reutilizáveis</span></div><div class="link"><a href="https://github.com/gabriela-doria/student-project-ops-ai">repositório · student-project-ops-ai</a></div></div></article>
+
+<article class="case" id="personal-os"><div class="meta"><b>Personal OS · 2026</b>projeto pessoal<br>desde set/2026<span class="tag">agentes</span></div><div><h3>16 agentes de IA que organizam faculdade, extensão e busca de estágio</h3><div class="flow"><div class="box"><span class="k">Problema</span>Informação espalhada em vários sistemas. O gargalo era coordenar: o que vence primeiro e onde está cada arquivo.</div><div class="box"><span class="k">O que eu fiz</span>Escrevi 16 skills do Claude que leem as fontes e propõem ações, mais um radar que dá nota de 0 a 100 a cada vaga.</div><div class="box res"><span class="k">Resultado</span>273 e-mails arquivados e 163 arquivos renomeados na primeira rodada.</div></div><div class="eq"><div class="box"><span class="k">Fontes</span>Gmail · Agenda · Drive · Moodle</div><span class="op">→</span><div class="box"><span class="k">Agentes</span>16 skills propõem</div><span class="op">→</span><div class="box"><span class="k">Eu</span>aprovo ou corrijo</div><span class="op">→</span><div class="box res"><span class="k">Ação</span>arquiva, renomeia, agenda</div></div><div class="nums "><div><b>273</b><small>e-mails arquivados</small></div><div><b>163</b><small>arquivos renomeados</small></div><div><b>~80 min</b><small>por semana na coleta de aulas (estimativa)</small></div><div><b>275</b><small>peças no Mapa do Sistema</small></div></div><div class="chips"><span class="chip on">Claude (skills, MCP, tarefas agendadas)</span><span class="chip">Google Apps Script</span><span class="chip">Python</span></div><p class="how">Como medi: contagem nos registros de execução (29/10/2026). O tempo poupado é estimativa minha, sem linha de base.</p><div class="link"><a href="https://github.com/gabriela-doria/personal-os-claude">repositório · personal-os-claude</a> · <a href="https://github.com/gabriela-doria/personal-os-claude/tree/main/skills/radar-estagios">radar de estágios</a></div></div></article>
+
+<article class="case" id="campus"><div class="meta"><b>Campus de energia</b>exercício pessoal<br>nov/2026<span class="tag">dados fictícios</span></div><div><h3>Qual cliente aproveita a energia que a rede não recebe</h3><div class="flow"><div class="box"><span class="k">Problema</span>Um parque eólico e solar gera mais do que cabe na linha de conexão.</div><div class="box"><span class="k">O que eu fiz</span>Simulação hora a hora com programação linear, preço-sombra e matriz de decisão para 3 clientes. Problema e critérios meus; código com o Claude.</div><div class="box res"><span class="k">Resultado</span>Com um data center ao lado, o parque aproveita toda a energia e a receita da semana sobe 96%.</div></div><div class="bars"><div class="bar"><span>Sem cliente ao lado</span><span class="trk"><span class="fill amb" style="width:64.1%"></span></span><span class="v">64,1%</span></div><div class="bar"><span>Com data center</span><span class="trk"><span class="fill" style="width:100%"></span></span><span class="v">100%</span></div></div><div class="chips"><span class="chip on">Claude (agente de código)</span><span class="chip">Python</span><span class="chip">SciPy</span><span class="chip">programação linear</span></div><p class="how">Como medi: 6 testes automáticos, entre eles a conta à mão contra o modelo e o preço-sombra com 1 MW a mais e a menos.</p><div class="link"><a href="https://github.com/gabriela-doria/campus-de-energia">repositório · campus-de-energia</a></div></div></article>
+
+<article class="case" id="rota"><div class="meta"><b>Rota do Excedente</b>case de desafio de IA<br>out/2026<span class="tag">dados fictícios</span></div><div><h3>Comida que sobra em restaurantes até cozinhas solidárias</h3><div class="flow"><div class="box"><span class="k">Problema</span>Restaurantes têm comida sobrando e as cozinhas não têm como buscar. Hipótese: falta transporte.</div><div class="box"><span class="k">O que eu fiz</span>Algoritmo que agrupa restaurantes em rotas, calcula o custo por kg e descarta rota que não se paga. Página com premissas editáveis.</div><div class="box res"><span class="k">Resultado</span>No exemplo, 128 kg resgatados a R$ 1,64 por kg, contra R$ 12,00 para comprar.</div></div><div class="funnel"><div class="fun"><span>Restaurantes</span><span class="seg" style="width:100%">16</span></div><div class="fun"><span>Rotas</span><span class="seg l2" style="width:37.5%">6</span></div><div class="fun"><span>Resgatados</span><span class="seg l3" style="width:60%">128 kg</span></div></div><div class="bars"><div class="bar"><span>Custo por kg, pela rota</span><span class="trk"><span class="fill" style="width:13.7%"></span></span><span class="v">R$ 1,64</span></div><div class="bar"><span>Custo por kg, comprando</span><span class="trk"><span class="fill amb" style="width:100%"></span></span><span class="v">R$ 12,00</span></div></div><div class="chips"><span class="chip on">Claude (agente de código)</span><span class="chip">JavaScript</span><span class="chip">Leaflet · OpenStreetMap</span></div><p class="how">Os valores em reais são hipóteses; proponho um piloto de 4 semanas para medir em campo.</p><div class="link"><a href="https://gabriela-doria.github.io/rota-do-excedente/">demo ao vivo</a> · <a href="https://github.com/gabriela-doria/rota-do-excedente">repositório</a></div></div></article>
+
+<article class="case" id="qgis"><div class="meta"><b>Análise espacial</b>Geoprocessamento, Poli-USP<br>1º sem/2026 · grupo de 3<span class="tag">dados públicos</span></div><div><h3>Metrô, renda e área construída em São Paulo, no QGIS</h3><div class="flow"><div class="box"><span class="k">Problema</span>A renda dos distritos acompanha o acesso ao metrô? Onde a cidade mais cresceu de 2010 a 2022?</div><div class="box"><span class="k">O que eu fiz</span>Cruzei Censo 2022, Pesquisa OD 2023 e IPTU com raios de 800 m nas 94 estações. Claude como guia de método e código.</div><div class="box res"><span class="k">Resultado</span>Em 46 dos 96 distritos, nenhum morador está a até 800 m de uma estação.</div></div><div class="bars"><div class="bar"><span>Distritos sem metrô a 800 m</span><span class="trk"><span class="fill amb" style="width:47.9%"></span></span><span class="v">46 / 96</span></div><div class="bar"><span>Área construída, Lapa</span><span class="trk"><span class="fill" style="width:100%"></span></span><span class="v">+25,5%</span></div><div class="bar"><span>Área construída, Capela do Socorro</span><span class="trk"><span class="fill" style="width:66.7%"></span></span><span class="v">+17,0%</span></div></div><div class="chips"><span class="chip on">Claude (guia de método)</span><span class="chip">QGIS</span><span class="chip">Python · geopandas</span><span class="chip">Google Earth Engine</span></div><p class="how">Trabalho em grupo; os mapas citados são os que eu fiz.</p><div class="link"><a href="https://github.com/gabriela-doria/analise-espacial-qgis-sp">repositório com os mapas</a></div></div></article>
+</div>
+
+<!-- ===================== PARTE 3 ===================== -->
+<div class="part" id="empreender"><span>3</span><div><h2 class="ph">Empreendedorismo e repertório</h2><p>Onde aprendi a ser responsável pelo resultado, do produto à entrega.</p></div></div>
+<div class="cases">
+<article class="case" id="megeve"><div class="meta"><b>Chocolates Megève</b>fundadora · MEI<br>out/2020 – ago/2023<span class="tag">ponta a ponta</span></div><div><h3>Operar uma marca do produto à entrega, sozinha</h3><div class="eq"><div class="box"><span class="k">Portfólio</span>28 itens em 5 linhas</div><span class="op">+</span><div class="box"><span class="k">Fornecimento</span>cacau do programa Cocoa Horizons, embalagem com menos plástico</div><span class="op">+</span><div class="box"><span class="k">Venda e entrega</span>site próprio, marketing digital, frete negociado</div><span class="op">=</span><div class="box res"><span class="k">Resultado</span>quase 3 anos de operação; lucro doado a projeto social</div></div></div></article>
+
+<article class="case" id="insead"><div class="meta"><b>Summer@INSEAD</b>Fontainebleau, França<br>jul – ago/2022<span class="tag">negócios</span></div><div><h3>COO numa simulação de aquisição de empresa</h3><div class="flow two"><div class="box"><span class="k">Admissão</span>processo seletivo com personal statement, carta de recomendação e entrevista em vídeo.</div><div class="box res"><span class="k">O que eu fiz</span>No time de 5, analisei os 3 documentos da transação e montei a matriz de negociação em 5 variáveis.</div></div><div class="chips"><span class="chip">estratégia</span><span class="chip">decisão sob incerteza</span><span class="chip">excelência operacional</span><span class="chip">negociação</span></div></div></article>
+</div>
+
+<!-- ===================== PARTE 4 ===================== -->
+<div class="part" id="ferramentas"><span>4</span><div><h2 class="ph">Ferramentas e formação</h2></div></div>
+<div class="cols">
+  <div>
+    <span class="t">Gestão</span>
+    <div class="chips"><span class="chip on">OKRs</span><span class="chip on">KPIs</span><span class="chip on">NPS</span><span class="chip">mapeamento de processos</span><span class="chip">matriz impacto-esforço</span><span class="chip">avaliação multicritério</span><span class="chip">SIPOC</span><span class="chip">RACI</span><span class="chip">pesquisa de clima</span></div>
+    <span class="t sp">Dados e tecnologia</span>
+    <div class="chips"><span class="chip on">Claude Code</span><span class="chip on">agentes de IA (skills, MCP)</span><span class="chip on">Google Apps Script</span><span class="chip on">Firebase</span><span class="chip">Excel</span><span class="chip">Google Sheets</span><span class="chip">Power BI</span><span class="chip">QGIS</span><span class="chip">Python (básico)</span><span class="chip">JavaScript</span><span class="chip">Git · GitHub</span></div>
   </div>
-  <div class="nums three">
-    <div><b>12</b><small>pessoas lideradas diretamente</small></div>
-    <div><b>3</b><small>cargos: consultora, gerente, diretora</small></div>
-    <div><b>40</b><small>membros na assembleia que aprovou o Grupo de Inovação</small></div>
+  <div>
+    <span class="t">Formação</span>
+    <div class="edu">
+      <span class="yy">2023–28</span><span><b>Poli-USP</b> · Engenharia Ambiental, formatura em dez/2028</span>
+      <span class="yy">2022</span><span><b>Summer@INSEAD</b> · negócios e liderança</span>
+      <span class="yy">2024</span><span><b>Bureau Veritas</b> · ESG aplicado à estratégia do negócio</span>
+    </div>
+    <p class="langs">Português nativo · inglês fluente · francês intermediário</p>
   </div>
-  <p class="how">Fonte: relatório de atividades 2025 da Poli Social e pesquisas de satisfação dos projetos.</p>
 </div>
 
 <h2 id="proximos">Próximos projetos · planejados, ainda sem resultado</h2>
@@ -410,7 +374,7 @@ table.mx tfoot td{font-family:var(--f-mono);font-size:.64rem;color:var(--ink-3);
 
 <footer class="foot">
   <a href="https://www.linkedin.com/in/gabriela-vs-doria/">LinkedIn</a> · <a href="https://github.com/gabriela-doria">GitHub</a> · <a href="mailto:gabrielavsdoria@gmail.com">gabrielavsdoria@gmail.com</a><br>
-  Atualizado em 17/11/2026. Os números têm fonte nos repositórios; dado fictício e estimativa estão marcados como tais.
+  Atualizado em 17/11/2026. Os números vêm de documentos dos projetos e dos repositórios; dado fictício e estimativa estão marcados como tais.
 </footer>
 </section>
 
@@ -422,43 +386,50 @@ table.mx tfoot td{font-family:var(--f-mono);font-size:.64rem;color:var(--ink-3);
   <div class="who">
     <img src="assets/foto-gabriela.jpg" width="104" height="104" alt="Photo of Gabriela Dória">
     <div>
-      <p class="eyebrow">AI portfolio · <b>data, automation and applied AI</b> · Nov 2026</p>
+      <p class="eyebrow">Portfolio · <b>managing by metrics, data and applied AI</b> · Nov 2026</p>
       <h1>Gabriela <em>Dória</em></h1>
-      <p class="lede">Environmental Engineering at Poli-USP, São Paulo. <b>I find the bottleneck, build the fix and measure whether it worked</b>, with data and AI in my everyday work.</p>
+      <p class="lede">Environmental Engineering at Poli-USP, São Paulo, and three years of management consulting, from consultant to director. <b>I find the bottleneck, build the fix and measure whether it worked</b>: with goals and metrics in management, and with data, automation and AI in the tools.</p>
     </div>
   </div>
   <div class="contact">Poli-USP · graduating Dec 2028<br>São Paulo · SP<br><a href="mailto:gabrielavsdoria@gmail.com">gabrielavsdoria@gmail.com</a><br><a href="https://www.linkedin.com/in/gabriela-vs-doria/">linkedin.com/in/gabriela-vs-doria</a><br><a href="https://github.com/gabriela-doria">github.com/gabriela-doria</a></div>
 </header>
 
 <section class="figures" aria-label="Figures">
+  <div class="fig"><b>94,9<span>%</span></b><small>average KPI attainment in the area I led (2025)</small></div>
+  <div class="fig"><b>30 <span>/ 14</span></b><small>meetings with the client NGO: actual / target</small></div>
   <div class="fig"><b>25</b><small>people use the app I built with Claude Code</small></div>
   <div class="fig"><b>16</b><small>AI agents I designed and run</small></div>
-  <div class="fig"><b>64<span>%</span> → 100<span>%</span></b><small>energy used in the simulation (fictitious data)</small></div>
-  <div class="fig"><b>94,9<span>%</span></b><small>average KPI attainment in the area I led</small></div>
 </section>
 
-<h2><b>How I work</b> · the same loop in every case</h2>
+<nav class="toc" aria-label="On this page">
+  <a href="#gestao-en"><b>1</b> Managing by metrics</a>
+  <a href="#ia-en"><b>2</b> Data, automation and AI</a>
+  <a href="#empreender-en"><b>3</b> Entrepreneurship and background</a>
+  <a href="#ferramentas-en"><b>4</b> Tools and education</a>
+</nav>
+
+<h2><b>How I work</b> · the same loop in management and in technology</h2>
 <div class="cycle">
-<svg viewBox="0 0 880 170" role="img" aria-label="Loop: 1 Find the bottleneck, 2 Build with AI, 3 Measure, and back to the start">
+<svg viewBox="0 0 880 170" role="img" aria-label="Loop: 1 Find the bottleneck, 2 Build the fix, 3 Measure, and back to the start">
   <defs><marker id="ah-en" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="arrh"/></marker></defs>
   <rect class="node" x="4" y="10" width="270" height="100" rx="5"/>
   <text class="num" x="20" y="42">1</text><text class="ttl" x="44" y="40">Find the bottleneck</text>
-  <text class="sub" x="20" y="66">I map the process</text><text class="sub" x="20" y="82">and pick the metric</text><text class="sub" x="20" y="98">before the tool</text>
+  <text class="sub" x="20" y="66">diagnosis, surveys, data</text><text class="sub" x="20" y="82">what is stuck and why</text><text class="sub" x="20" y="98">metric before the tool</text>
   <rect class="node" x="304" y="10" width="270" height="100" rx="5"/>
-  <text class="num" x="320" y="42">2</text><text class="ttl" x="344" y="40">Build with AI</text>
-  <text class="sub" x="320" y="66">Claude Code · agents · Apps Script</text><text class="sub" x="320" y="82">AI proposes, I decide</text><text class="sub" x="320" y="98">nothing goes out without my ok</text>
+  <text class="num" x="320" y="42">2</text><text class="ttl" x="344" y="40">Build the fix</text>
+  <text class="sub" x="320" y="66">OKRs, processes, people</text><text class="sub" x="320" y="82">apps, automations, AI agents</text><text class="sub" x="320" y="98">built to last without me</text>
   <rect class="node hi" x="604" y="10" width="272" height="100" rx="5"/>
   <text class="num" x="620" y="42">3</text><text class="ttl" x="644" y="40">Measure</text>
-  <text class="sub" x="620" y="66">automated tests and counts</text><text class="sub" x="620" y="82">estimates labeled as estimates</text><text class="sub" x="620" y="98">fictitious data flagged</text>
+  <text class="sub" x="620" y="66">actual vs. target, NPS, adoption</text><text class="sub" x="620" y="82">automated tests and counts</text><text class="sub" x="620" y="98">estimates labeled as estimates</text>
   <path class="arr" d="M276 60 H300" marker-end="url(#ah-en)"/>
   <path class="arr" d="M576 60 H600" marker-end="url(#ah-en)"/>
   <path class="arr" d="M740 112 V140 H140 V114" marker-end="url(#ah-en)"/>
   <text class="loop" x="440" y="158" text-anchor="middle">→ back to step 1 with what the measurement showed</text>
 </svg>
 <ol class="cyclist">
-  <li><b>1 · Find the bottleneck</b>I map the process and pick the metric before the tool</li>
-  <li><b>2 · Build with AI</b>Claude Code · agents · Apps Script. AI proposes, I decide.</li>
-  <li class="hi"><b>3 · Measure</b>automated tests and counts; estimates and fictitious data flagged</li>
+  <li><b>1 · Find the bottleneck</b>diagnosis, surveys and data: what is stuck and why</li>
+  <li><b>2 · Build the fix</b>OKRs, processes and people; apps, automations and AI agents</li>
+  <li class="hi"><b>3 · Measure</b>actual vs. target, NPS, adoption, tests and counts</li>
   <li class="loop">↺ back to step 1 with what the measurement showed</li>
 </ol>
 </div>
@@ -467,169 +438,92 @@ table.mx tfoot td{font-family:var(--f-mono);font-size:.64rem;color:var(--ink-3);
 <div class="tl">
 <svg viewBox="0 0 880 96" role="img" aria-label="Timeline from 2020 to 2026">
   <line class="axis" x1="20" y1="32" x2="860" y2="32"/>
-  <circle cx="45" cy="32" r="5"/><text class="y" x="45" y="18" text-anchor="middle">2020</text><text x="45" y="52" text-anchor="middle">Megève</text><text x="45" y="65" text-anchor="middle">founder</text>
-  <circle cx="165" cy="32" r="5"/><text class="y" x="165" y="18" text-anchor="middle">2022</text><text x="165" y="52" text-anchor="middle">Summer@INSEAD</text>
-  <circle cx="285" cy="32" r="5"/><text class="y" x="285" y="18" text-anchor="middle">2023</text><text x="285" y="52" text-anchor="middle">Poli-USP</text><text x="285" y="65" text-anchor="middle">Poli Social</text>
-  <circle cx="405" cy="32" r="5"/><text class="y" x="405" y="18" text-anchor="middle">Nov 2024</text><text x="405" y="52" text-anchor="middle">Director</text><text x="405" y="65" text-anchor="middle">of Projects</text>
-  <circle cx="525" cy="32" r="7" class="hi"/><text class="y hi" x="525" y="18" text-anchor="middle">Sep 2026</text><text class="hi" x="525" y="52" text-anchor="middle">Areia Viva Drive</text><text class="hi" x="525" y="65" text-anchor="middle">Personal OS</text>
-  <circle cx="645" cy="32" r="7" class="hi"/><text class="y hi" x="645" y="18" text-anchor="middle">Oct 2026</text><text class="hi" x="645" y="52" text-anchor="middle">Rota do Excedente</text>
-  <circle cx="765" cy="32" r="7" class="hi"/><text class="y hi" x="765" y="18" text-anchor="middle">Nov 2026</text><text class="hi" x="765" y="52" text-anchor="middle">Areia Viva app</text><text class="hi" x="765" y="65" text-anchor="middle">Campus de energia</text>
+  <circle cx="45" cy="32" r="6" class="hi"/><text class="y hi" x="45" y="18" text-anchor="middle">Oct 2020</text><text class="hi" x="45" y="52" text-anchor="middle">Megève</text><text x="45" y="65" text-anchor="middle">founder</text>
+  <circle cx="160" cy="32" r="5"/><text class="y" x="160" y="18" text-anchor="middle">2022</text><text x="160" y="52" text-anchor="middle">Summer@INSEAD</text>
+  <circle cx="275" cy="32" r="6" class="hi"/><text class="y hi" x="275" y="18" text-anchor="middle">Mar 2023</text><text class="hi" x="275" y="52" text-anchor="middle">Poli Social</text><text x="275" y="65" text-anchor="middle">consultant</text>
+  <circle cx="390" cy="32" r="6" class="hi"/><text class="y hi" x="390" y="18" text-anchor="middle">Nov 2023</text><text class="hi" x="390" y="52" text-anchor="middle">Manager</text><text x="390" y="65" text-anchor="middle">team of 5</text>
+  <circle cx="505" cy="32" r="6" class="hi"/><text class="y hi" x="505" y="18" text-anchor="middle">Nov 2024</text><text class="hi" x="505" y="52" text-anchor="middle">Director</text><text x="505" y="65" text-anchor="middle">area OKRs</text>
+  <circle cx="620" cy="32" r="6" class="hi"/><text class="y hi" x="620" y="18" text-anchor="middle">Sep 2026</text><text class="hi" x="620" y="52" text-anchor="middle">Areia Viva</text><text x="620" y="65" text-anchor="middle">Personal OS</text>
+  <circle cx="735" cy="32" r="6" class="hi"/><text class="y hi" x="735" y="18" text-anchor="middle">Oct 2026</text><text class="hi" x="735" y="52" text-anchor="middle">Rota do</text><text x="735" y="65" text-anchor="middle">Excedente</text>
+  <circle cx="845" cy="32" r="6" class="hi"/><text class="y hi" x="845" y="18" text-anchor="end">Nov 2026</text><text class="hi" x="845" y="52" text-anchor="end">app in use</text><text x="845" y="65" text-anchor="end">Campus</text>
 </svg>
 <ul class="tlist">
-  <li><b>2020</b>Chocolates Megève · founder</li>
+  <li class="hi"><b>Oct 2020</b>Chocolates Megève · founder</li>
   <li><b>2022</b>Summer@INSEAD</li>
-  <li><b>2023</b>Poli-USP · Poli Social</li>
-  <li><b>Nov 2024</b>Director of Projects</li>
-  <li class="hi"><b>Sep 2026</b>Areia Viva Drive · Personal OS</li>
+  <li class="hi"><b>Mar 2023</b>Poli Social · consultant</li>
+  <li class="hi"><b>Nov 2023</b>Project Manager, team of 5</li>
+  <li class="hi"><b>Nov 2024</b>Director of Projects, area OKRs</li>
+  <li class="hi"><b>Sep 2026</b>Areia Viva · Personal OS</li>
   <li class="hi"><b>Oct 2026</b>Rota do Excedente</li>
-  <li class="hi"><b>Nov 2026</b>Areia Viva app · Campus de energia</li>
+  <li class="hi"><b>Nov 2026</b>Areia Viva app in use · Campus de energia</li>
 </ul>
 </div>
 
-<h2 id="vaga-en"><b>What an AI role asks for</b> · and where the proof is</h2>
+<h2><b>Skills × cases</b> · where the proof of each one is</h2>
+<div class="mxwrap">
 <table class="mx">
-<thead><tr><th></th><th>Areia Viva</th><th>Personal OS</th><th>Campus</th><th>Rota</th><th>QGIS</th></tr></thead>
-<tbody><tr><td>Automation that saves hours</td><td><span class="d" title="published proof"></span></td><td><span class="d" title="published proof"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Live tool used by other people</td><td><span class="d" title="published proof"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Agent that solves a problem</td><td><span class="o"></span></td><td><span class="d" title="published proof"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Dashboard</td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="d" title="published proof"></span></td><td><span class="o"></span></td></tr><tr><td>Demo built from scratch</td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="d" title="published proof"></span></td><td><span class="d" title="published proof"></span></td><td><span class="o"></span></td></tr><tr><td>Prompt engineering</td><td><span class="d" title="published proof"></span></td><td><span class="d" title="published proof"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Agent orchestration (Claude)</td><td><span class="o"></span></td><td><span class="d" title="published proof"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Coding with an AI agent (vibe coding)</td><td><span class="d" title="published proof"></span></td><td><span class="o"></span></td><td><span class="d" title="published proof"></span></td><td><span class="d" title="published proof"></span></td><td><span class="o"></span></td></tr><tr><td>API with no backend of its own</td><td><span class="d" title="published proof"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Data analysis with AI</td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="d" title="published proof"></span></td><td><span class="o"></span></td><td><span class="d" title="published proof"></span></td></tr><tr class="pl"><td>Automation with n8n, Make or Zapier</td><td colspan="5"><span class="chip dash">planned</span></td></tr><tr class="pl"><td>Orchestration across models (Claude + Gemini)</td><td colspan="5"><span class="chip dash">planned</span></td></tr></tbody>
-<tfoot><tr><td colspan="6"><span class="d"></span> proof published in the case &nbsp; <span class="o"></span> not applicable &nbsp; <span class="chip dash">planned</span> no proof yet</td></tr></tfoot>
+<thead><tr><th></th><th><span>Director</span></th><th><span>Selection</span></th><th><span>Innovation</span></th><th><span>Palavras de Paz</span></th><th><span>Areia Viva</span></th><th><span>Personal OS</span></th><th><span>Campus</span></th><th><span>Rota</span></th><th><span>QGIS</span></th><th><span>Megève</span></th></tr></thead>
+<tbody><tr><td>Managing by metrics (OKRs and KPIs)</td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Leading people</td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Decisions on explicit criteria</td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Diagnosis and problem solving</td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td></tr><tr><td>Data, spreadsheets and dashboards</td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td></tr><tr><td>Automation and AI agents</td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Tool used by other people</td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>Coding with an AI agent</td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="o"></span></td></tr><tr><td>End-to-end view</td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="d"></span></td><td><span class="o"></span></td><td><span class="d"></span></td></tr></tbody>
+<tfoot><tr><td colspan="11"><span class="d"></span> used in the case &nbsp; <span class="o"></span> not the focus</td></tr></tfoot>
 </table>
-
-<h2 id="casos-en"><b>Five cases</b> · problem → what I did → result</h2>
-<div class="cases">
-
-<article class="case" id="areia-viva-en">
-  <div class="meta"><b>Areia Viva · 2026</b>USP extension project, volunteer<br>Drive Sep 2026 · app Nov 2026<span class="tag">in use</span></div>
-  <div>
-    <h3>An hours app 25 people use, built with Claude Code</h3>
-    <div class="flow">
-      <div class="box"><span class="k">Problem</span>Hours were logged on a computer, often months later. The Drive had no rule for names, folders or access.</div>
-      <div class="box"><span class="k">What I did</span>I restructured the Drive with a decision matrix and scripts that simulate before running. I built the app: phone, Google sign-in, role-based access.</div>
-      <div class="box res"><span class="k">Result</span>App used by 25 people since 13 Nov 2026. Hours are now logged the same day.</div>
-    </div>
-    <div class="eq">
-      <div class="box"><span class="k">Sep 2026</span>Drive restructured</div><span class="op">→</span>
-      <div class="box"><span class="k">1st version</span>Drive Map on Apps Script</div><span class="op">→</span>
-      <div class="box res"><span class="k">Nov 2026</span>App on Firebase, 32 access-rule tests</div>
-    </div>
-    <div class="nums">
-      <div><b>25</b><small>people use the app</small></div>
-      <div><b>32</b><small>automated tests</small></div>
-      <div><b>124</b><small>files renamed</small></div>
-      <div><b>33</b><small>role-based accounts</small></div>
-      <div><b>62</b><small>folders in the new structure</small></div>
-    </div>
-    <figure class="shot"><img src="assets/app-areia-viva-demo.jpg" width="700" height="525" loading="lazy" alt="Screen of the Areia Viva app dashboard, with hours and tasks, in demo mode"><figcaption><b>Areia Viva app</b> · screen in demo mode, with fictitious data</figcaption></figure>
-    <div class="chips"><span class="chip on">Claude Code</span><span class="chip on">Firebase</span><span class="chip">Google Apps Script</span><span class="chip">Drive API</span><span class="chip">4 reusable prompts</span></div>
-    <p class="how">How I measured: the counts come from the scripts' logs. The day-to-day change has no number yet; the measurement plan is in the repository.</p>
-    <div class="link"><a href="https://github.com/gabriela-doria/student-project-ops-ai">repository · student-project-ops-ai</a></div>
-  </div>
-</article>
-
-<article class="case" id="personal-os-en">
-  <div class="meta"><b>Personal OS · 2026</b>personal project<br>since Sep 2026<span class="tag">agents</span></div>
-  <div>
-    <h3>16 AI agents that run coursework, extension work and the internship search</h3>
-    <div class="flow">
-      <div class="box"><span class="k">Problem</span>Information spread across systems. The bottleneck was coordination: what is due first and where each file is.</div>
-      <div class="box"><span class="k">What I did</span>I wrote 16 Claude skills that read the sources and propose actions, plus a radar that scores each opening from 0 to 100.</div>
-      <div class="box res"><span class="k">Result</span>273 emails archived and 163 files renamed in the first run.</div>
-    </div>
-    <div class="eq">
-      <div class="box"><span class="k">Sources</span>Gmail · Calendar · Drive · Moodle</div><span class="op">→</span>
-      <div class="box"><span class="k">Agents</span>16 skills propose</div><span class="op">→</span>
-      <div class="box"><span class="k">Me</span>approve or correct</div><span class="op">→</span>
-      <div class="box res"><span class="k">Action</span>archives, renames, schedules</div>
-    </div>
-    <div class="nums">
-      <div><b>273</b><small>emails archived</small></div>
-      <div><b>163</b><small>files renamed</small></div>
-      <div><b>~80 min</b><small>a week on course materials (estimate)</small></div>
-      <div><b>275</b><small>parts in the System Map</small></div>
-    </div>
-    <div class="chips"><span class="chip on">Claude (skills, MCP, scheduled tasks)</span><span class="chip">Google Apps Script</span><span class="chip">Python</span></div>
-    <p class="how">How I measured: counts from the run logs (29 Oct 2026). Time saved is my own estimate, with no baseline.</p>
-    <div class="link"><a href="https://github.com/gabriela-doria/personal-os-claude">repository · personal-os-claude</a> · <a href="https://github.com/gabriela-doria/personal-os-claude/tree/main/skills/radar-estagios">internship radar</a></div>
-  </div>
-</article>
-
-<article class="case" id="campus-en">
-  <div class="meta"><b>Campus de energia</b>personal exercise<br>Nov 2026<span class="tag">fictitious data</span></div>
-  <div>
-    <h3>Which customer uses the energy the grid can't take</h3>
-    <div class="flow">
-      <div class="box"><span class="k">Problem</span>A wind and solar park produces more than its grid connection can carry.</div>
-      <div class="box"><span class="k">What I did</span>Hour-by-hour simulation with linear programming, shadow prices and a decision matrix for 3 customers. Problem and criteria mine; code with Claude.</div>
-      <div class="box res"><span class="k">Result</span>With a data center next door, the park uses all its energy and weekly revenue rises 96%.</div>
-    </div>
-    <div class="bars">
-      <div class="bar"><span>No customer next door</span><span class="trk"><span class="fill amb" style="width:64.1%"></span></span><span class="v">64,1%</span></div>
-      <div class="bar"><span>With a data center</span><span class="trk"><span class="fill" style="width:100%"></span></span><span class="v">100%</span></div>
-    </div>
-    <div class="chips"><span class="chip on">Claude (coding agent)</span><span class="chip">Python</span><span class="chip">SciPy</span><span class="chip">linear programming</span></div>
-    <p class="how">How I measured: 6 automated tests, including a hand calculation against the model and the shadow price at ±1 MW.</p>
-    <div class="link"><a href="https://github.com/gabriela-doria/campus-de-energia">repository · campus-de-energia</a></div>
-  </div>
-</article>
-
-<article class="case" id="rota-en">
-  <div class="meta"><b>Rota do Excedente</b>AI challenge case<br>Oct 2026<span class="tag">fictitious data</span></div>
-  <div>
-    <h3>Surplus restaurant food to community kitchens</h3>
-    <div class="flow">
-      <div class="box"><span class="k">Problem</span>Restaurants have surplus food and kitchens can't collect it. Hypothesis: transport is missing.</div>
-      <div class="box"><span class="k">What I did</span>An algorithm that groups restaurants into routes, computes cost per kg and drops routes that don't pay off. A page with editable assumptions.</div>
-      <div class="box res"><span class="k">Result</span>In the example, 128 kg rescued at R$ 1.64 per kg, versus R$ 12.00 to buy.</div>
-    </div>
-    <div class="funnel">
-      <div class="fun"><span>Restaurants</span><span class="seg" style="width:100%">16</span></div>
-      <div class="fun"><span>Routes</span><span class="seg l2" style="width:37.5%">6</span></div>
-      <div class="fun"><span>Rescued</span><span class="seg l3" style="width:60%">128 kg</span></div>
-    </div>
-    <div class="bars">
-      <div class="bar"><span>Cost per kg, by route</span><span class="trk"><span class="fill" style="width:13.7%"></span></span><span class="v">R$ 1,64</span></div>
-      <div class="bar"><span>Cost per kg, buying</span><span class="trk"><span class="fill amb" style="width:100%"></span></span><span class="v">R$ 12,00</span></div>
-    </div>
-    <div class="chips"><span class="chip on">Claude (coding agent)</span><span class="chip">JavaScript</span><span class="chip">Leaflet · OpenStreetMap</span></div>
-    <p class="how">How I measured: the algorithm drops a route when its cost per kg exceeds the cost of buying. The amounts are hypotheses; I propose a 4-week field pilot.</p>
-    <div class="link"><a href="https://gabriela-doria.github.io/rota-do-excedente/">live demo</a> · <a href="https://github.com/gabriela-doria/rota-do-excedente">repository</a></div>
-  </div>
-</article>
-
-<article class="case" id="qgis-en">
-  <div class="meta"><b>Spatial analysis</b>Geoprocessamento, Poli-USP<br>1st sem 2026 · group of 3<span class="tag">public data</span></div>
-  <div>
-    <h3>Metro, income and built area in São Paulo, in QGIS</h3>
-    <div class="flow">
-      <div class="box"><span class="k">Problem</span>Does district income follow metro access? Where did the city grow most from 2010 to 2022?</div>
-      <div class="box"><span class="k">What I did</span>I combined the 2022 census, 2023 travel survey and property tax data with 800 m buffers around 94 stations. Claude as a method and code guide.</div>
-      <div class="box res"><span class="k">Result</span>In 46 of 96 districts, no resident lives within 800 m of a station.</div>
-    </div>
-    <div class="bars">
-      <div class="bar"><span>Districts with no metro within 800 m</span><span class="trk"><span class="fill amb" style="width:47.9%"></span></span><span class="v">46 / 96</span></div>
-      <div class="bar"><span>Built area, Lapa</span><span class="trk"><span class="fill" style="width:100%"></span></span><span class="v">+25,5%</span></div>
-      <div class="bar"><span>Built area, Capela do Socorro</span><span class="trk"><span class="fill" style="width:66.7%"></span></span><span class="v">+17,0%</span></div>
-    </div>
-    <div class="chips"><span class="chip">QGIS</span><span class="chip">Python · geopandas</span><span class="chip">Google Earth Engine</span><span class="chip on">Claude (method guide)</span></div>
-    <p class="how">Group work; the maps cited are the ones I made. Limits written in the repository: uniform population within each tract and straight-line distance.</p>
-    <div class="link"><a href="https://github.com/gabriela-doria/analise-espacial-qgis-sp">repository with the maps</a></div>
-  </div>
-</article>
 </div>
 
-<h2 id="gestao-en"><b>Beyond AI</b> · metrics, innovation and people at Poli Social, 2023 – 2025</h2>
-<div class="beyond">
-  <div class="bars">
-    <div class="bar"><span>KPIs of the area I led, 2025</span><span class="trk"><span class="fill" style="width:94.9%"></span></span><span class="v">94,9%</span></div>
-    <div class="bar"><span>Relationship target with NGOs</span><span class="trk"><span class="fill" style="width:100%"></span><span class="goal" style="left:46.7%"></span></span><span class="v">214,3%</span></div>
-    <div class="bar"><span>Innovation Group: model approved</span><span class="trk"><span class="fill amb" style="width:84.2%"></span></span><span class="v">84,2%</span></div>
-    <div class="bar"><span>Innovation Group: final proposal</span><span class="trk"><span class="fill amb" style="width:83.3%"></span></span><span class="v">83,3%</span></div>
-    <div class="bar"><span>NGO NPS on the 10-month project</span><span class="trk"><span class="fill" style="width:100%"></span></span><span class="v">100</span></div>
+<!-- ===================== PARTE 1 ===================== -->
+<div class="part" id="gestao-en"><span>1</span><div><h2 class="ph">Managing by metrics</h2><p>Poli Social, Poli-USP's pro bono management consulting group for NGOs. Three years, from consultant to Director of Projects.</p></div></div>
+<div class="cases">
+
+<article class="case" id="diretoria-en"><div class="meta"><b>Poli Social · 2025</b>Director of Projects<br>Nov 2024 – Nov 2025<span class="tag">OKRs and KPIs</span></div><div><h3>Running a whole area by metrics</h3><div class="flow"><div class="box"><span class="k">Problem</span>Answer for the method, the people, the project portfolio and the relationship with the client NGO.</div><div class="box"><span class="k">What I did</span>I designed the area's OKRs: 3 objectives and 15 key results. Fortnightly tracking and a plan review every four months.</div><div class="box res"><span class="k">Result</span>Metrics, relationship and NGO NPS above target at year end.</div></div><div class="okr"><div class="o1"><span class="k">OKR 1 · people</span>Belonging and growth of the consultants</div><div class="o1 hi"><span class="k">OKR 2 · client</span>Visible impact on the NGO</div><div class="o1"><span class="k">OKR 3 · process</span>Professionalize the area with planning and shared knowledge</div></div><div class="bars"><div class="bar"><span>Area KPIs · average attainment</span><span class="trk"><span class="fill" style="width:94.9%"></span></span><span class="v">94,9%</span></div><div class="bar"><span>Meetings with the NGO · target 14</span><span class="trk"><span class="fill" style="width:100%"></span><span class="goal" style="left:46.7%"></span></span><span class="v">30</span></div><div class="bar"><span>In-person visits · target 4</span><span class="trk"><span class="fill" style="width:100%"></span><span class="goal" style="left:80%"></span></span><span class="v">5</span></div><div class="bar"><span>NGO NPS · 3 cycles</span><span class="trk"><span class="fill" style="width:93.3%"></span></span><span class="v">100·80·100</span></div><div class="bar"><span>OKR planning meetings</span><span class="trk"><span class="fill" style="width:100%"></span></span><span class="v">4 / 4</span></div></div><figure class="shot wide"><a href="assets/okr-projetos-2025-planilha.jpg"><img src="assets/okr-projetos-2025-planilha.jpg" width="2250" height="458" loading="lazy" alt="Screenshot of the Poli Social Projects area OKR spreadsheet for 2025, with objectives, key results, starting, current and target values and percentage"></a><figcaption><b>The tool</b> · Projects area OKR spreadsheet, 2025: each key result with starting, current and target value (click to enlarge)</figcaption></figure><div class="chips"><span class="chip on">OKRs</span><span class="chip on">KPIs</span><span class="chip on">NPS</span><span class="chip">Excel</span><span class="chip">Google Sheets</span><span class="chip">fortnightly check-ins</span></div><p class="how">Source: Poli Social 2025 activity report and the area OKR spreadsheet.</p></div></article>
+
+<article class="case" id="edital-en"><div class="meta"><b>Poli Social · 2025</b>Consulting call<br>ran the process<span class="tag">criteria-based decision</span></div><div><h3>Choosing the year's client on criteria, not gut feeling</h3><div class="flow"><div class="box"><span class="k">Problem</span>Choose, among the applicants, the NGO that would receive the year's consulting.</div><div class="box"><span class="k">What I did</span>Call and contract; review of institutional, financial and legal documents; interviews; multi-criteria assessment.</div><div class="box res"><span class="k">Result</span>A choice backed by explicit criteria, from 18 applications to 1 NGO.</div></div><div class="funnel"><div class="fun"><span>Applications reviewed</span><span class="seg" style="width:100%">18</span></div><div class="fun"><span>Interviews</span><span class="seg l2" style="width:33.3%">6</span></div><div class="fun"><span>Selected</span><span class="seg l3" style="width:9%">1</span></div></div><div class="chips"><span class="chip on">multi-criteria assessment</span><span class="chip">financial analysis</span><span class="chip">legal review</span></div></div></article>
+
+<article class="case" id="inovacao-en"><div class="meta"><b>Poli Social · 2025</b>Innovation Group<br>built from scratch<span class="tag">innovation</span></div><div><h3>Giving an owner to ideas that came up and died</h3><div class="flow"><div class="box"><span class="k">Problem</span>Ideas came up in meetings and died with no owner, method or deadline.</div><div class="box"><span class="k">What I did</span>I designed the Innovation Group model, took it to a 40-member assembly and led 7 people from diagnosis to solution, prioritized with an impact-effort matrix.</div><div class="box res"><span class="k">Result</span>Model approved by 84.2% and final proposal by 83.3%, in about 8 months.</div></div><div class="eq"><div class="box"><span class="k">1 · model</span>roles, rituals and rules</div><span class="op">→</span><div class="box"><span class="k">2 · assembly</span>40 members vote</div><span class="op">→</span><div class="box"><span class="k">3 · diagnosis</span>team of 7 maps problems</div><span class="op">→</span><div class="box"><span class="k">4 · prioritization</span>impact-effort matrix</div><span class="op">→</span><div class="box res"><span class="k">5 · proposal</span>approved by the assembly</div></div><div class="bars"><div class="bar"><span>Model approved by the assembly</span><span class="trk"><span class="fill amb" style="width:84.2%"></span></span><span class="v">84,2%</span></div><div class="bar"><span>Final proposal approved</span><span class="trk"><span class="fill amb" style="width:83.3%"></span></span><span class="v">83,3%</span></div></div><div class="chips"><span class="chip on">impact-effort matrix</span><span class="chip">facilitation</span><span class="chip">people management</span></div></div></article>
+
+<article class="case" id="palavras-de-paz-en"><div class="meta"><b>Poli Social · 2024</b>Project Manager<br>team of 5 · 10 months<span class="tag">management data</span></div><div><h3>Giving numbers to an NGO that is large in reach and small in structure</h3><div class="flow"><div class="box"><span class="k">Problem</span>The NGO Palavras de Paz had about 250 volunteers and served 6,000 to 13,000 people a year, with no management data to decide on.</div><div class="box"><span class="k">What I did</span>I led 5 consultants from diagnosis to delivery: a volunteer survey, new Mission, Vision and Values, OKR goals, a monthly climate survey and a Power BI dashboard covering 2021 to 2024.</div><div class="box res"><span class="k">Result</span>19 deliverables on time, NGO NPS of 100 and a baseline to measure progress.</div></div><div class="bars"><div class="bar"><span>Volunteers who knew the year's goals</span><span class="trk"><span class="fill amb" style="width:21.9%"></span></span><span class="v">21,9%</span></div><div class="bar"><span>NGO NPS at project end</span><span class="trk"><span class="fill" style="width:100%"></span></span><span class="v">100</span></div></div><div class="nums "><div><b>250</b><small>volunteers at the NGO</small></div><div><b>32</b><small>responses to the diagnosis survey</small></div><div><b>19</b><small>deliverables</small></div><div><b>2021–24</b><small>years in the dashboard</small></div></div><div class="chips"><span class="chip on">Power BI</span><span class="chip on">climate survey</span><span class="chip on">OKRs</span><span class="chip">diagnosis</span><span class="chip">MVV</span></div><p class="how">The diagnosis showed only 21.9% of volunteers knew the year's goals: that was the starting point for the OKR goals.</p></div></article>
+
+<article class="case" id="novos-valores-en"><div class="meta"><b>Poli Social · 2023</b>Project Consultant<br>Mar – Nov 2023<span class="tag">revenue</span></div><div><h3>Diversifying revenue for an NGO that relied on two donors</h3><div class="flow"><div class="box"><span class="k">Problem</span>At Instituto Novos Valores, 90% of costs came from two donors.</div><div class="box"><span class="k">What I did</span>I created the brand identity (24-page manual) for fundraising, and mapped the requirements and followed the registration in the Nota Fiscal Paulista program.</div><div class="box res"><span class="k">Result</span>A brand used to attract investors and volunteers, and a new revenue source in registration.</div></div><div class="nums two"><div><b>90%</b><small>of costs came from 2 donors</small></div><div><b>24</b><small>pages in the brand manual</small></div></div></div></article>
+</div>
+
+<!-- ===================== PARTE 2 ===================== -->
+<div class="part" id="ia-en"><span>2</span><div><h2 class="ph">Data, automation and AI</h2><p>The same loop applied to technology: an app in use, agents I work with every day and demos with fictitious data.</p></div></div>
+<div class="cases">
+
+<article class="case" id="areia-viva-en"><div class="meta"><b>Areia Viva · 2026</b>USP extension project, volunteer<br>Drive Sep 2026 · app Nov 2026<span class="tag">in use</span></div><div><h3>A management app 25 people use, built with Claude Code</h3><div class="flow"><div class="box"><span class="k">Problem</span>Hours were logged on a computer, often months later; tasks had no owner and the Drive had no rule for names, folders or access.</div><div class="box"><span class="k">What I did</span>I restructured the Drive with a decision matrix and scripts that simulate before running. I built the app: hours from the phone, tasks with owner and deadline, events and a Drive map, with Google sign-in and role-based access.</div><div class="box res"><span class="k">Result</span>App used by 25 people since 13 Nov 2026. Hours are now logged the same day.</div></div><div class="eq"><div class="box"><span class="k">Sep 2026</span>Drive restructured</div><span class="op">→</span><div class="box"><span class="k">1st version</span>Drive Map on Apps Script</div><span class="op">→</span><div class="box res"><span class="k">Nov 2026</span>Firebase app: dashboard, tasks, hours, events</div></div><div class="nums "><div><b>25</b><small>people use the app</small></div><div><b>32</b><small>access-rule tests</small></div><div><b>124</b><small>files renamed</small></div><div><b>33</b><small>role-based accounts</small></div><div><b>62</b><small>folders in the new structure</small></div></div><div class="gallery"><figure class="shot g1"><a href="assets/app-areia-viva-painel.jpg"><img src="assets/app-areia-viva-painel.jpg" width="1100" height="760" loading="lazy" alt="App personal dashboard: next task, hours left to the goal and next event"></a><figcaption><b>My dashboard</b> · what to do now, hours and next event</figcaption></figure><figure class="shot g2"><a href="assets/app-areia-viva-tarefas.jpg"><img src="assets/app-areia-viva-tarefas.jpg" width="1100" height="760" loading="lazy" alt="App task list with workstream, owner, deadline and status"></a><figcaption><b>Tasks</b> · owner, deadline and status; list, board and timeline</figcaption></figure><figure class="shot g3"><a href="assets/app-areia-viva-horas.jpg"><img src="assets/app-areia-viva-horas.jpg" width="1100" height="620" loading="lazy" alt="Hours screen: how much is left to the goal and weekly pace"></a><figcaption><b>Hours</b> · goal, weekly pace and entries</figcaption></figure><figure class="shot g4 phone"><a href="assets/app-areia-viva-celular.jpg"><img src="assets/app-areia-viva-celular.jpg" width="390" height="844" loading="lazy" alt="The app on a phone"></a><figcaption><b>On the phone</b> · where hours are logged</figcaption></figure></div><p class="how">Screens in demo mode, with fictitious data. How I measured: the counts come from the scripts' logs; the day-to-day change has no number yet.</p><div class="chips"><span class="chip on">Claude Code</span><span class="chip on">Firebase</span><span class="chip">Google Apps Script</span><span class="chip">Drive API</span><span class="chip">4 reusable prompts</span></div><div class="link"><a href="https://github.com/gabriela-doria/student-project-ops-ai">repository · student-project-ops-ai</a></div></div></article>
+
+<article class="case" id="personal-os-en"><div class="meta"><b>Personal OS · 2026</b>personal project<br>since Sep 2026<span class="tag">agents</span></div><div><h3>16 AI agents that run coursework, extension work and the internship search</h3><div class="flow"><div class="box"><span class="k">Problem</span>Information spread across systems. The bottleneck was coordination: what is due first and where each file is.</div><div class="box"><span class="k">What I did</span>I wrote 16 Claude skills that read the sources and propose actions, plus a radar that scores each opening from 0 to 100.</div><div class="box res"><span class="k">Result</span>273 emails archived and 163 files renamed in the first run.</div></div><div class="eq"><div class="box"><span class="k">Sources</span>Gmail · Calendar · Drive · Moodle</div><span class="op">→</span><div class="box"><span class="k">Agents</span>16 skills propose</div><span class="op">→</span><div class="box"><span class="k">Me</span>approve or correct</div><span class="op">→</span><div class="box res"><span class="k">Action</span>archives, renames, schedules</div></div><div class="nums "><div><b>273</b><small>emails archived</small></div><div><b>163</b><small>files renamed</small></div><div><b>~80 min</b><small>a week on course materials (estimate)</small></div><div><b>275</b><small>parts in the System Map</small></div></div><div class="chips"><span class="chip on">Claude (skills, MCP, scheduled tasks)</span><span class="chip">Google Apps Script</span><span class="chip">Python</span></div><p class="how">How I measured: counts from the run logs (29 Oct 2026). Time saved is my own estimate, with no baseline.</p><div class="link"><a href="https://github.com/gabriela-doria/personal-os-claude">repository · personal-os-claude</a> · <a href="https://github.com/gabriela-doria/personal-os-claude/tree/main/skills/radar-estagios">internship radar</a></div></div></article>
+
+<article class="case" id="campus-en"><div class="meta"><b>Campus de energia</b>personal exercise<br>Nov 2026<span class="tag">fictitious data</span></div><div><h3>Which customer uses the energy the grid can't take</h3><div class="flow"><div class="box"><span class="k">Problem</span>A wind and solar park produces more than its grid connection can carry.</div><div class="box"><span class="k">What I did</span>Hour-by-hour simulation with linear programming, shadow prices and a decision matrix for 3 customers. Problem and criteria mine; code with Claude.</div><div class="box res"><span class="k">Result</span>With a data center next door, the park uses all its energy and weekly revenue rises 96%.</div></div><div class="bars"><div class="bar"><span>No customer next door</span><span class="trk"><span class="fill amb" style="width:64.1%"></span></span><span class="v">64,1%</span></div><div class="bar"><span>With a data center</span><span class="trk"><span class="fill" style="width:100%"></span></span><span class="v">100%</span></div></div><div class="chips"><span class="chip on">Claude (coding agent)</span><span class="chip">Python</span><span class="chip">SciPy</span><span class="chip">linear programming</span></div><p class="how">How I measured: 6 automated tests, including a hand calculation against the model and the shadow price at ±1 MW.</p><div class="link"><a href="https://github.com/gabriela-doria/campus-de-energia">repository · campus-de-energia</a></div></div></article>
+
+<article class="case" id="rota-en"><div class="meta"><b>Rota do Excedente</b>AI challenge case<br>Oct 2026<span class="tag">fictitious data</span></div><div><h3>Surplus restaurant food to community kitchens</h3><div class="flow"><div class="box"><span class="k">Problem</span>Restaurants have surplus food and kitchens can't collect it. Hypothesis: transport is missing.</div><div class="box"><span class="k">What I did</span>An algorithm that groups restaurants into routes, computes cost per kg and drops routes that don't pay off. A page with editable assumptions.</div><div class="box res"><span class="k">Result</span>In the example, 128 kg rescued at R$ 1.64 per kg, versus R$ 12.00 to buy.</div></div><div class="funnel"><div class="fun"><span>Restaurants</span><span class="seg" style="width:100%">16</span></div><div class="fun"><span>Routes</span><span class="seg l2" style="width:37.5%">6</span></div><div class="fun"><span>Rescued</span><span class="seg l3" style="width:60%">128 kg</span></div></div><div class="bars"><div class="bar"><span>Cost per kg, by route</span><span class="trk"><span class="fill" style="width:13.7%"></span></span><span class="v">R$ 1,64</span></div><div class="bar"><span>Cost per kg, buying</span><span class="trk"><span class="fill amb" style="width:100%"></span></span><span class="v">R$ 12,00</span></div></div><div class="chips"><span class="chip on">Claude (coding agent)</span><span class="chip">JavaScript</span><span class="chip">Leaflet · OpenStreetMap</span></div><p class="how">The amounts are hypotheses; I propose a 4-week field pilot.</p><div class="link"><a href="https://gabriela-doria.github.io/rota-do-excedente/">live demo</a> · <a href="https://github.com/gabriela-doria/rota-do-excedente">repository</a></div></div></article>
+
+<article class="case" id="qgis-en"><div class="meta"><b>Spatial analysis</b>Geoprocessing, Poli-USP<br>1st sem 2026 · group of 3<span class="tag">public data</span></div><div><h3>Metro, income and built area in São Paulo, in QGIS</h3><div class="flow"><div class="box"><span class="k">Problem</span>Does district income follow metro access? Where did the city grow most from 2010 to 2022?</div><div class="box"><span class="k">What I did</span>I combined the 2022 census, 2023 travel survey and property tax data with 800 m buffers around 94 stations. Claude as a method and code guide.</div><div class="box res"><span class="k">Result</span>In 46 of 96 districts, no resident lives within 800 m of a station.</div></div><div class="bars"><div class="bar"><span>Districts with no metro within 800 m</span><span class="trk"><span class="fill amb" style="width:47.9%"></span></span><span class="v">46 / 96</span></div><div class="bar"><span>Built area, Lapa</span><span class="trk"><span class="fill" style="width:100%"></span></span><span class="v">+25,5%</span></div><div class="bar"><span>Built area, Capela do Socorro</span><span class="trk"><span class="fill" style="width:66.7%"></span></span><span class="v">+17,0%</span></div></div><div class="chips"><span class="chip on">Claude (method guide)</span><span class="chip">QGIS</span><span class="chip">Python · geopandas</span><span class="chip">Google Earth Engine</span></div><p class="how">Group work; the maps cited are the ones I made.</p><div class="link"><a href="https://github.com/gabriela-doria/analise-espacial-qgis-sp">repository with the maps</a></div></div></article>
+</div>
+
+<!-- ===================== PARTE 3 ===================== -->
+<div class="part" id="empreender-en"><span>3</span><div><h2 class="ph">Entrepreneurship and background</h2><p>Where I learned to own the result, from product to delivery.</p></div></div>
+<div class="cases">
+<article class="case" id="megeve-en"><div class="meta"><b>Chocolates Megève</b>founder · sole proprietor<br>Oct 2020 – Aug 2023<span class="tag">end to end</span></div><div><h3>Running a brand from product to delivery, on my own</h3><div class="eq"><div class="box"><span class="k">Portfolio</span>28 items in 5 lines</div><span class="op">+</span><div class="box"><span class="k">Sourcing</span>cocoa from the Cocoa Horizons program, less plastic packaging</div><span class="op">+</span><div class="box"><span class="k">Sales and delivery</span>own website, digital marketing, negotiated shipping</div><span class="op">=</span><div class="box res"><span class="k">Result</span>almost 3 years of operation; profit donated to a social project</div></div></div></article>
+
+<article class="case" id="insead-en"><div class="meta"><b>Summer@INSEAD</b>Fontainebleau, France<br>Jul – Aug 2022<span class="tag">business</span></div><div><h3>COO in a company acquisition simulation</h3><div class="flow two"><div class="box"><span class="k">Admission</span>selection with a personal statement, a recommendation letter and a video interview.</div><div class="box res"><span class="k">What I did</span>In a team of 5, I analyzed the 3 deal documents and built the negotiation matrix on 5 variables.</div></div><div class="chips"><span class="chip">strategy</span><span class="chip">decision under uncertainty</span><span class="chip">operational excellence</span><span class="chip">negotiation</span></div></div></article>
+</div>
+
+<!-- ===================== PARTE 4 ===================== -->
+<div class="part" id="ferramentas-en"><span>4</span><div><h2 class="ph">Tools and education</h2></div></div>
+<div class="cols">
+  <div>
+    <span class="t">Management</span>
+    <div class="chips"><span class="chip on">OKRs</span><span class="chip on">KPIs</span><span class="chip on">NPS</span><span class="chip">process mapping</span><span class="chip">impact-effort matrix</span><span class="chip">multi-criteria assessment</span><span class="chip">SIPOC</span><span class="chip">RACI</span><span class="chip">climate survey</span></div>
+    <span class="t sp">Data and technology</span>
+    <div class="chips"><span class="chip on">Claude Code</span><span class="chip on">AI agents (skills, MCP)</span><span class="chip on">Google Apps Script</span><span class="chip on">Firebase</span><span class="chip">Excel</span><span class="chip">Google Sheets</span><span class="chip">Power BI</span><span class="chip">QGIS</span><span class="chip">Python (basic)</span><span class="chip">JavaScript</span><span class="chip">Git · GitHub</span></div>
   </div>
-  <div class="nums three">
-    <div><b>12</b><small>people led directly</small></div>
-    <div><b>3</b><small>roles: consultant, manager, director</small></div>
-    <div><b>40</b><small>members at the assembly that approved the Innovation Group</small></div>
+  <div>
+    <span class="t">Education</span>
+    <div class="edu">
+      <span class="yy">2023–28</span><span><b>Poli-USP</b> · Environmental Engineering, graduating Dec 2028</span>
+      <span class="yy">2022</span><span><b>Summer@INSEAD</b> · business and leadership</span>
+      <span class="yy">2024</span><span><b>Bureau Veritas</b> · ESG applied to business strategy</span>
+    </div>
+    <p class="langs">Portuguese native · English fluent · French intermediate</p>
   </div>
-  <p class="how">Source: Poli Social 2025 activity report and project satisfaction surveys.</p>
 </div>
 
 <h2 id="proximos-en">Next projects · planned, no results yet</h2>
@@ -641,7 +535,7 @@ table.mx tfoot td{font-family:var(--f-mono);font-size:.64rem;color:var(--ink-3);
 
 <footer class="foot">
   <a href="https://www.linkedin.com/in/gabriela-vs-doria/">LinkedIn</a> · <a href="https://github.com/gabriela-doria">GitHub</a> · <a href="mailto:gabrielavsdoria@gmail.com">gabrielavsdoria@gmail.com</a><br>
-  Updated on 17 Nov 2026. Numbers are sourced in the repositories; fictitious data and estimates are labeled as such.
+  Updated on 17 Nov 2026. Numbers come from project documents and the repositories; fictitious data and estimates are labeled as such.
 </footer>
 </section>
 </main>

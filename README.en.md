@@ -4,21 +4,22 @@
 
 **Page:** https://gabriela-doria.github.io/ai-portfolio/#en (Portuguese: https://gabriela-doria.github.io/ai-portfolio/)
 
-A single page with my applied AI projects: automations, an app in daily use by the team of a university extension project, agents built with Claude and demos built from scratch. Each case shows the problem, what I did and the result, with the AI used and how I measured it.
+A single page with my portfolio in two parts: managing by metrics at Poli Social (OKRs, a client selection call, an Innovation Group, consulting for NGOs) and data, automation and AI (an app in daily use by the team of a university extension project, agents built with Claude and demos built from scratch). Each case shows the problem, what I did and the result, and how I measured it.
 
 ## What is here
 
 | File | What it is |
 |---|---|
 | [`index.html`](index.html) | The whole page: text, CSS and JavaScript in one file, no external libraries |
-| `assets/` | Photo and a screen of the Areia Viva app (demo mode, fictitious data) |
-| `build/gerar.py` | Builds `index.html` in Portuguese and English from a single template |
+| `assets/` | Photo, screens of the Areia Viva app (demo mode, fictitious data) and a screenshot of the Poli Social Projects area OKR spreadsheet, 2025 |
+| `build/conteudo.py` | All page text, with Portuguese and English side by side |
+| `build/gerar.py` | Page styles; builds `index.html` from `conteudo.py` |
 | `README.md` and `README.en.md` | This text, in Portuguese and English |
 | `LICENSE` | MIT license |
 
 ## How to update
 
-1. Edit the text in `build/gerar.py` (each sentence has its Portuguese and English versions side by side) and run `python3 build/gerar.py` from the repository root. You can also edit `index.html` directly: Portuguese lives in the `id="pt"` block and English in the `id="en"` block; change both together.
+1. Edit the text in `build/conteudo.py` (each sentence has its Portuguese and English versions side by side) and run `python3 build/gerar.py` from the repository root. You can also edit `index.html` directly: Portuguese lives in the `id="pt"` block and English in the `id="en"` block; change both together.
 2. Keep the rule for numbers: only numbers with a source; fictional data and estimates labelled as such.
 3. Change the date in "Atualizado em" in the page footer.
 4. Save with a short commit message, for example `docs: add case X`.
