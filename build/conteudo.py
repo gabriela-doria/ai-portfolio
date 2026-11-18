@@ -274,12 +274,14 @@ def page(L):
  flow(t('Informação espalhada em vários sistemas. O gargalo era coordenar: o que vence primeiro e onde está cada arquivo.','Information spread across systems. The bottleneck was coordination: what is due first and where each file is.'),
       t('Escrevi 16 skills do Claude que leem as fontes e propõem ações, mais um radar que dá nota de 0 a 100 a cada vaga.','I wrote 16 Claude skills that read the sources and propose actions, plus a radar that scores each opening from 0 to 100.'),
       t('273 e-mails arquivados e 163 arquivos renomeados na primeira rodada.','273 emails archived and 163 files renamed in the first run.'))
- + '<div class="eq">'
- + f'<div class="box"><span class="k">{t("Fontes","Sources")}</span>Gmail · {t("Agenda","Calendar")} · Drive · Moodle</div><span class="op">→</span>'
- + f'<div class="box"><span class="k">{t("Agentes","Agents")}</span>{t("16 skills propõem","16 skills propose")}</div><span class="op">→</span>'
- + f'<div class="box"><span class="k">{t("Eu","Me")}</span>{t("aprovo ou corrijo","approve or correct")}</div><span class="op">→</span>'
- + f'<div class="box res"><span class="k">{t("Ação","Action")}</span>{t("arquiva, renomeia, agenda","archives, renames, schedules")}</div>'
+ + '<div class="arch">'
+ + f'<div class="col"><span class="k">{t("Fontes","Sources")}</span><ul><li>Gmail</li><li>{t("Google Agenda","Google Calendar")}</li><li>Drive · Docs · Sheets</li><li>Moodle · Classroom</li><li>{t("Portais de vagas","Job boards")}</li></ul></div>'
+ + '<div class="ar">→</div>'
+ + f'<div class="col hi"><span class="k">{t("16 agentes (skills)","16 agents (skills)")}</span><ul><li>{t("Radar de estágios","Internship radar")}</li><li>{t("Preparar processo seletivo","Selection process prep")}</li><li>{t("Resumo da manhã","Morning brief")}</li><li>{t("Proposta da semana","Weekly plan")}</li><li>Moodle → Drive + {t("Agenda","Calendar")}</li><li>…</li></ul></div>'
+ + '<div class="ar">→</div>'
+ + f'<div class="col"><span class="k">{t("Saídas","Outputs")}</span><ul><li>{t("Planilha de prioridade das vagas","Openings priority sheet")}</li><li>{t("Agenda em blocos de 25 min","Calendar in 25-min blocks")}</li><li>{t("Docs de preparação","Prep docs")}</li><li>{t("Painel diário","Daily dashboard")}</li></ul></div>'
  + '</div>'
+ + f'<div class="archfoot"><span class="me">{t("Eu valido cada proposta antes de virar ação","I approve each proposal before it becomes an action")}</span><span>{t("Mapa do Sistema: 275 peças e 252 mudanças registradas","System Map: 275 parts and 252 logged changes")}</span><span>{t("2 rotinas agendadas: resumo (seg–sex 6h) e proposta da semana (dom 18h)","2 scheduled routines: brief (Mon–Fri 6am) and weekly plan (Sun 6pm)")}</span></div>'
  + nums([('273', t('e-mails arquivados','emails archived')), ('163', t('arquivos renomeados','files renamed')), ('~80 min', t('por semana na coleta de aulas (estimativa)','a week on course materials (estimate)')), ('275', t('peças no Mapa do Sistema','parts in the System Map'))])
  + chips([t('Claude (skills, MCP, tarefas agendadas)','Claude (skills, MCP, scheduled tasks)')], ['Google Apps Script', 'Python'])
  + f'<p class="how">{t("Como medi: contagem nos registros de execução (29/10/2026). O tempo poupado é estimativa minha, sem linha de base.","How I measured: counts from the run logs (29 Oct 2026). Time saved is my own estimate, with no baseline.")}</p>'
@@ -294,6 +296,8 @@ def page(L):
  + bar(t('Sem cliente ao lado','No customer next door'), 64.1, '64,1%', amb=True)
  + bar(t('Com data center','With a data center'), 100, '100%')
  + '</div>'
+ + f'<figure class="shot wide"><a href="assets/campus-destino-da-energia.jpg"><img src="assets/campus-destino-da-energia.jpg" width="1100" height="757" loading="lazy" alt="{t("Gráfico de áreas: para onde vai a energia de cada hora, sem cliente (64,1% aproveitada) e com data center (100%)","Area chart: where each hour\'s energy goes, with no customer (64.1% used) and with a data center (100%)")}"></a><figcaption><b>{t("Para onde vai a energia de cada hora","Where each hour\'s energy goes")}</b> · {t("sem cliente, a parte cinza é energia cortada; com o data center, ela some (3 primeiros dias, dados fictícios)","with no customer, the grey area is curtailed energy; with the data center, it disappears (first 3 days, fictitious data)")}</figcaption></figure>'
+ + f'<figure class="shot wide"><a href="assets/campus-nota-dos-clientes.jpg"><img src="assets/campus-nota-dos-clientes.jpg" width="1100" height="317" loading="lazy" alt="{t("Barras: nota final de cada cliente na matriz de decisão: data center 0,72, indústria de turno diurno 0,36, eletrolisador de hidrogênio 0,29","Bars: final score of each customer in the decision matrix: data center 0.72, day-shift industry 0.36, hydrogen electrolyzer 0.29")}"></a><figcaption><b>{t("Matriz de decisão","Decision matrix")}</b> · {t("nota final de cada cliente, de 0 a 1","final score of each customer, from 0 to 1")}</figcaption></figure>'
  + chips([t('Claude (agente de código)','Claude (coding agent)')], ['Python', 'SciPy', t('programação linear','linear programming')])
  + f'<p class="how">{t("Como medi: 6 testes automáticos, entre eles a conta à mão contra o modelo e o preço-sombra com 1 MW a mais e a menos.","How I measured: 6 automated tests, including a hand calculation against the model and the shadow price at ±1 MW.")}</p>'
  + f'<div class="link"><a href="{GH}/campus-de-energia">{t("repositório","repository")} · campus-de-energia</a></div>')}
@@ -311,6 +315,7 @@ def page(L):
  + bar(t('Custo por kg, pela rota','Cost per kg, by route'), 13.7, 'R$ 1,64')
  + bar(t('Custo por kg, comprando','Cost per kg, buying'), 100, 'R$ 12,00', amb=True)
  + '</div>'
+ + f'<figure class="shot wide"><a href="https://gabriela-doria.github.io/rota-do-excedente/"><img src="assets/rota-do-excedente-demo.jpg" width="1100" height="739" loading="lazy" alt="{t("Tela da demo: resultado do dia (128 kg, 6 rotas, 16,3 km, R$ 1,64 por kg) e mapa com as rotas até duas cozinhas","Demo screen: the day\'s result (128 kg, 6 routes, 16.3 km, R$ 1.64 per kg) and a map with routes to two kitchens")}"></a><figcaption><b>{t("A demo","The demo")}</b> · {t("resultado do dia, rotas e mapa; clique para abrir a versão ao vivo (dados fictícios)","the day\'s result, routes and map; click to open the live version (fictitious data)")}</figcaption></figure>'
  + chips([t('Claude (agente de código)','Claude (coding agent)')], ['JavaScript', 'Leaflet · OpenStreetMap'])
  + f'<p class="how">{t("Os valores em reais são hipóteses; proponho um piloto de 4 semanas para medir em campo.","The amounts are hypotheses; I propose a 4-week field pilot.")}</p>'
  + f'<div class="link"><a href="https://gabriela-doria.github.io/rota-do-excedente/">{t("demo ao vivo","live demo")}</a> · <a href="{GH}/rota-do-excedente">{t("repositório","repository")}</a></div>')}
