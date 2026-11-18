@@ -204,7 +204,24 @@ def page(L):
  + f'<figure class="shot"><a href="assets/inovacao-criterios-de-decisao.jpg"><img src="assets/inovacao-criterios-de-decisao.jpg" width="1100" height="619" loading="lazy" alt="{t("Slide: critérios de decisão para escolher uma proposta: prioridade, viabilidade e resiliência, potencial de impacto","Slide: decision criteria to choose a proposal: priority, feasibility and resilience, impact potential")}"></a><figcaption><b>{t("Os critérios","The criteria")}</b> · {t("como a assembleia escolheu entre as propostas","how the assembly chose between proposals")}</figcaption></figure>'
  + f'<figure class="shot"><a href="assets/inovacao-proposta-pontos-de-atencao.jpg"><img src="assets/inovacao-proposta-pontos-de-atencao.jpg" width="1100" height="619" loading="lazy" alt="{t("Slide: proposta Pontos de Atenção, com objetivo, problema, o que será feito, prazo e responsável","Slide: the Points of Attention proposal, with goal, problem, what will be done, deadline and owner")}"></a><figcaption><b>{t("Uma das 4 propostas","One of the 4 proposals")}</b> · {t("problema, ação, prazo e responsável","problem, action, deadline and owner")}</figcaption></figure>'
  + '</div>'
- + chips([t('matriz impacto-esforço','impact-effort matrix')], [t('facilitação','facilitation'), t('gestão de pessoas','people management')]))}
+
+ + f'<h4 class="sub">{t("Da proposta à implementação","From proposal to implementation")}</h4>'
+ + '<div class="gantt">'
+ + ''.join(f'<span style="flex:{w}" class="{c}"><b>{lab}</b><small>{w} {t("sem","wk")}</small></span>' for w,c,lab in [(2,'g0',t('preparo','prep')),(4,'g1',t('ciclo 0','cycle 0')),(6,'g2',t('ciclo 1','cycle 1')),(6,'g2',t('ciclo 2','cycle 2')),(6,'g2',t('ciclo 3','cycle 3')),(4,'g1',t('finalização','wrap-up')),(4,'g3','feedbacks')])
+ + '</div>'
+ + f'<p class="how">{t("Cronograma planejado do projeto-piloto: mar a dez/2025, cerca de 30 reuniões semanais do grupo, descontadas as semanas de prova e os feriados.","Planned pilot timeline: Mar to Dec 2025, about 30 weekly group meetings, net of exam weeks and holidays.")}</p>'
+ + '<div class="eq">'
+ + f'<div class="box"><span class="k">{t("4 propostas","4 proposals")}</span>{t("apresentadas à entidade","presented to the organization")}</div><span class="op">→</span>'
+ + f'<div class="box"><span class="k">{t("feedback","feedback")}</span>{t("respostas do formulário agrupadas por tema e frequência","form answers grouped by theme and frequency")}</div><span class="op">→</span>'
+ + f'<div class="box"><span class="k">{t("escolha","choice")}</span>{t("Pontos de Atenção","Points of Attention")}</div><span class="op">→</span>'
+ + f'<div class="box res"><span class="k">{t("versão 1.1","version 1.1")}</span>{t("tabela de pontos, fluxogramas e planilha de acompanhamento","points table, flowcharts and tracking sheet")}</div>'
+ + '</div>'
+ + '<div class="gallery3">'
+ + f'<figure class="shot c1"><a href="assets/inovacao-proposta-implementacao-capa.jpg"><img src="assets/inovacao-proposta-implementacao-capa.jpg" width="1100" height="807" loading="lazy" alt="{t("Primeira página do documento Proposta de Implementação: Pontos de atenção","First page of the document Implementation Proposal: Points of Attention")}"></a><figcaption><b>{t("O documento","The document")}</b> · {t("proposta de implementação, versão 1.1","implementation proposal, version 1.1")}</figcaption></figure>'
+ + f'<figure class="shot c2"><a href="assets/inovacao-fluxograma-pontuacao.jpg"><img src="assets/inovacao-fluxograma-pontuacao.jpg" width="920" height="342" loading="lazy" alt="{t("Fluxograma: da infração à advertência, feedback 1:1 com o líder, feedback com a diretoria de RH e desligamento, conforme a pontuação","Flowchart: from infraction to warning, 1:1 feedback with the leader, feedback with the HR director and dismissal, by points")}"></a><figcaption><b>{t("Regra clara","A clear rule")}</b> · {t("o que acontece a cada faixa de pontos","what happens at each points band")}</figcaption></figure>'
+ + f'<figure class="shot c3"><a href="assets/inovacao-fluxograma-registro.jpg"><img src="assets/inovacao-fluxograma-registro.jpg" width="990" height="317" loading="lazy" alt="{t("Fluxograma do registro de faltas: antes do evento e no dia do evento, tudo vai para a planilha","Absence logging flowchart: before the event and on the day, everything goes to the sheet")}"></a><figcaption><b>{t("Registro","Logging")}</b> · {t("antes e no dia de cada reunião","before and on the day of each meeting")}</figcaption></figure>'
+ + '</div>'
+ + chips([t('matriz impacto-esforço','impact-effort matrix')], [t('facilitação','facilitation'), t('gestão de pessoas','people management'), t('RACI para as tarefas do grupo','RACI for the group tasks'), t('fluxogramas','flowcharts')]))}
 
 {case('palavras-de-paz','Poli Social · 2024', t('Gerente de Projetos<br>time de 5 · 10 meses','Project Manager<br>team of 5 · 10 months'), t('dados de gestão','management data'),
  t('Dar números a uma ONG grande em alcance e pequena em estrutura','Giving numbers to an NGO that is large in reach and small in structure'),

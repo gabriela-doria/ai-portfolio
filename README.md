@@ -11,7 +11,7 @@ Página única com meu portfólio em duas partes: gestão por indicadores na Pol
 | Arquivo | O que é |
 |---|---|
 | [`index.html`](index.html) | A página inteira: texto, CSS e JavaScript no mesmo arquivo, sem bibliotecas externas |
-| `assets/` | Foto, telas do app do Areia Viva (modo de demonstração, dados fictícios) , print da planilha de OKRs da área de Projetos da Poli Social, 2025, e slides do Grupo de Inovação (2025) |
+| `assets/` | Foto, telas do app do Areia Viva (modo de demonstração, dados fictícios) , print da planilha de OKRs da área de Projetos da Poli Social, 2025, e slides, fluxogramas e documento de implementação do Grupo de Inovação (2025) |
 | `build/conteudo.py` | Todo o texto da página, com português e inglês lado a lado |
 | `build/gerar.py` | Estilo da página; gera o `index.html` a partir do `conteudo.py` |
 | `README.md` e `README.en.md` | Este texto, em português e em inglês |
